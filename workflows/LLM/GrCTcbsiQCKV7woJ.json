@@ -1,0 +1,408 @@
+{
+  "active": false,
+  "connections": {
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Redis Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Vector Store Retriever": {
+      "ai_retriever": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "ai_retriever",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Question and Answer Chain": {
+      "main": [
+        [
+          {
+            "node": "VectorResponse",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings HuggingFace Inference": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Supabase Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CONFIG": {
+      "main": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "VectorResponse": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Respond to Webhook",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Groq Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "Question and Answer Chain",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase Vector Store": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "Vector Store Retriever",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "CONFIG",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-08-26T16:28:18.073Z",
+  "id": "GrCTcbsiQCKV7woJ",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "_TKT____Bot_LLM___OpenAI___Supabase-15",
+  "nodes": [
+    {
+      "parameters": {
+        "model": "={{ $('CONFIG').item.json.AI_model }}",
+        "options": {
+          "responseFormat": "text",
+          "temperature": "={{ $('CONFIG').item.json.AI_temperature }}"
+        }
+      },
+      "id": "c76d3b11-4bb2-403b-a923-54b5764a6c52",
+      "name": "OpenAI Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        1420,
+        660
+      ],
+      "credentials": {
+        "openAiApi": {
+          "id": "SjUc9oBD2osglKO2",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "sessionKey": "={{ $('CONFIG').item.json.id_chat }}",
+        "sessionTTL": 3600
+      },
+      "id": "4f28ac1d-0bb7-4b8d-812c-138316cd0af3",
+      "name": "Redis Chat Memory",
+      "type": "@n8n/n8n-nodes-langchain.memoryRedisChat",
+      "typeVersion": 1,
+      "position": [
+        1660,
+        680
+      ],
+      "credentials": {
+        "redis": {
+          "id": "Ukoroj1tv3driH6f",
+          "name": "Redis account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "id": "eeb67229-4428-4af3-85ad-a24e6e7f1668",
+      "name": "Respond to Webhook",
+      "type": "n8n-nodes-base.respondToWebhook",
+      "typeVersion": 1,
+      "position": [
+        1940,
+        360
+      ]
+    },
+    {
+      "parameters": {
+        "query": "={{ $('CONFIG').item.json.IA_pergunta }}"
+      },
+      "id": "c75dbac3-2c82-4a0d-b8a7-3d12f45bd373",
+      "name": "Question and Answer Chain",
+      "type": "@n8n/n8n-nodes-langchain.chainRetrievalQa",
+      "typeVersion": 1.1,
+      "position": [
+        680,
+        360
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "8501ed03-6cd6-4ee8-8b33-58863dfd0b8f",
+      "name": "Vector Store Retriever",
+      "type": "@n8n/n8n-nodes-langchain.retrieverVectorStore",
+      "typeVersion": 1,
+      "position": [
+        860,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "modelName": "BAAI/bge-small-en-v1.5",
+        "options": {}
+      },
+      "id": "3a3ad933-f55a-4b5f-9322-82dce8829989",
+      "name": "Embeddings HuggingFace Inference",
+      "type": "@n8n/n8n-nodes-langchain.embeddingsHuggingFaceInference",
+      "typeVersion": 1,
+      "position": [
+        1100,
+        920
+      ],
+      "credentials": {
+        "huggingFaceApi": {
+          "id": "VtAwIHv7WFxgGXTL",
+          "name": "HuggingFaceApi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "id_chat",
+              "stringValue": "={{ $json.body.id_chat }}"
+            },
+            {
+              "name": "IA_pergunta",
+              "stringValue": "={{ $json.body.IA_pergunta }}"
+            },
+            {
+              "name": "IA_model",
+              "stringValue": "={{ $json.body.IA_model }}"
+            },
+            {
+              "name": "IA_temperature",
+              "type": "numberValue",
+              "numberValue": "={{ $json.body.IA_temperature }}"
+            },
+            {
+              "name": "IA_apikey",
+              "stringValue": "={{ $json.body.IA_apikey }}"
+            },
+            {
+              "name": "IA_prompt",
+              "stringValue": "={{ $json.body.IA_prompt }}"
+            }
+          ]
+        },
+        "include": "none",
+        "options": {}
+      },
+      "id": "a10fc793-36cd-46e5-9b96-01ea29f66810",
+      "name": "CONFIG",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        420,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "fields": {
+          "values": [
+            {
+              "name": "IA_pergunta",
+              "stringValue": "={{ $('CONFIG').item.json.IA_pergunta }}"
+            },
+            {
+              "name": "IA_resposta",
+              "stringValue": "={{ $json.response.text }}"
+            },
+            {
+              "name": "IA_apikey",
+              "stringValue": "={{ $('CONFIG').item.json.IA_apikey }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "a9332725-b05a-46ca-a698-fc7a8f0b8e23",
+      "name": "VectorResponse",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.2,
+      "position": [
+        1220,
+        300
+      ]
+    },
+    {
+      "parameters": {
+        "text": "={{ $('VectorResponse').item.json.IA_pergunta }}",
+        "options": {
+          "systemMessage": "=Responder sempre em português do Brasil.\n {{ $('VectorResponse').item.json.IA_resposta }}\n{{ $('CONFIG').item.json.IA_prompt }}"
+        }
+      },
+      "id": "e01f6350-04d8-4bcd-82f9-4c46d03fc676",
+      "name": "AI Agent",
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.1,
+      "position": [
+        1540,
+        440
+      ]
+    },
+    {
+      "parameters": {
+        "model": "llama3-groq-70b-8192-tool-use-preview",
+        "options": {}
+      },
+      "id": "c61433fd-4b01-49fc-b600-80f00de2103d",
+      "name": "Groq Chat Model",
+      "type": "@n8n/n8n-nodes-langchain.lmChatGroq",
+      "typeVersion": 1,
+      "position": [
+        680,
+        580
+      ],
+      "credentials": {
+        "groqApi": {
+          "id": "SyVPdz0fjEP1xkZy",
+          "name": "Groq account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "tableName": {
+          "__rl": true,
+          "value": "=documents2",
+          "mode": "id"
+        },
+        "options": {
+          "queryName": "match_documents2"
+        }
+      },
+      "id": "975a4588-7f0b-4f59-8e8f-b78ab18f22b7",
+      "name": "Supabase Vector Store",
+      "type": "@n8n/n8n-nodes-langchain.vectorStoreSupabase",
+      "typeVersion": 1,
+      "position": [
+        960,
+        740
+      ],
+      "credentials": {
+        "supabaseApi": {
+          "id": "LRsToRbtQFqXXqmT",
+          "name": "Supabase account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "oreia",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "cad6dceb-34b4-4634-9c6a-b5223f059d94",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 1,
+      "position": [
+        120,
+        400
+      ],
+      "webhookId": "bdcbe5b8-3b24-479f-86bb-ac106b8eb3ae"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-08-26T16:28:36.326Z",
+      "updatedAt": "2024-08-26T16:28:36.326Z",
+      "id": "q6k0NTetxvLROtFw",
+      "name": "LLM"
+    },
+    {
+      "createdAt": "2025-01-24T15:42:43.271Z",
+      "updatedAt": "2025-01-24T15:42:43.271Z",
+      "id": "SCD8dv2ksVWqKJs6",
+      "name": "DEVELOPMENT"
+    }
+  ],
+  "triggerCount": 1,
+  "updatedAt": "2024-08-26T16:53:23.791Z",
+  "versionId": "e223e1e5-d3f5-4bf5-8d73-999d30852848"
+}
