@@ -1,0 +1,2567 @@
+{
+  "active": false,
+  "connections": {
+    "n8n Form Trigger": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Campos",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cria pasta do cliente": {
+      "main": [
+        [
+          {
+            "node": "copia recibo para a pasta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "copia recibo para a pasta": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Campos": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "Campos1",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cria pasta do cliente1": {
+      "main": [
+        [
+          {
+            "node": "copia recibo para a pasta1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "copia recibo para a pasta1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Campos1": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "Campos2",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cria pasta do cliente2": {
+      "main": [
+        [
+          {
+            "node": "copia recibo para a pasta2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "copia recibo para a pasta2": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields2": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Campos2": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets2": {
+      "main": [
+        [
+          {
+            "node": "No Operation, do nothing3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "node": "Campos3",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cria pasta do cliente3": {
+      "main": [
+        [
+          {
+            "node": "copia recibo para a pasta3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "copia recibo para a pasta3": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields3": {
+      "main": [
+        [
+          {
+            "node": "Code3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Campos3": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields6",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code4": {
+      "main": [
+        [
+          {
+            "node": "Campos4",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cria pasta do cliente4": {
+      "main": [
+        [
+          {
+            "node": "copia recibo para a pasta4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "copia recibo para a pasta4": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields4": {
+      "main": [
+        [
+          {
+            "node": "Code4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Campos4": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code5": {
+      "main": [
+        [
+          {
+            "node": "Campos5",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cria pasta do cliente5": {
+      "main": [
+        [
+          {
+            "node": "copia recibo para a pasta5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "copia recibo para a pasta5": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields5": {
+      "main": [
+        [
+          {
+            "node": "Code5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Campos5": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "Cria pasta do cliente1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Cria pasta do cliente",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Cria pasta do cliente2",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Cria pasta do cliente3",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Cria pasta do cliente4",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Cria pasta do cliente5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields6": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "Google Docs1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait1": {
+      "main": [
+        [
+          {
+            "node": "Google Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait2": {
+      "main": [
+        [
+          {
+            "node": "Google Docs2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait3": {
+      "main": [
+        [
+          {
+            "node": "Google Docs3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait4": {
+      "main": [
+        [
+          {
+            "node": "Google Docs4",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait5": {
+      "main": [
+        [
+          {
+            "node": "Google Docs5",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-12-03T22:02:13.930Z",
+  "id": "Fe1IaxJEoccIcdtY",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "Recibo visto usa assinado copy 2",
+  "nodes": [
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "={{ $('copia recibo para a pasta').item.json.id }}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "replaceAll",
+              "text": "{{nome}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "matchCase": "={{ true }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{cpf}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.CPF }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{email}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.email }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{whats}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.whats }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{qtdade}}",
+              "replaceText": "= {{ $('n8n Form Trigger').item.json['Quantidade ?'] }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{price}}",
+              "replaceText": "={{ \n  $('n8n Form Trigger').item.json['Quantidade ?'] == 1 \n    ? 320 \n    : $('n8n Form Trigger').item.json['Quantidade ?'] == 2 \n      ? 600 \n      : $('n8n Form Trigger').item.json['Quantidade ?'] * 280 \n}}\n"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{data_pe}}",
+              "replaceText": "={{ DateTime.now().setZone('America/Sao_Paulo').setLocale('pt-BR').toFormat('d \\'de\\' LLLL \\'de\\' yyyy') }}\n"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{x_pe}}",
+              "replaceText": "={{ $json.valorPorExtenso }}",
+              "matchCase": "={{ false }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{servico}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Serviço contratado?'] }}",
+              "matchCase": "={{ false }}"
+            }
+          ]
+        }
+      },
+      "id": "d8c13217-9e28-4de3-909d-f653026131e8",
+      "name": "Google Docs",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        1080,
+        -700
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "cQ7MTspYcgHpbKT3",
+          "name": "Google Docs account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "path": "recibo",
+        "formTitle": "Formulário de recibo",
+        "formDescription": "Preencha com os dados do solicitante",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Serviço contratado?",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Visto Americano"
+                  },
+                  {
+                    "option": "Passaporte Brasileiro"
+                  },
+                  {
+                    "option": "Visto Australiano"
+                  },
+                  {
+                    "option": "ESTA Americano"
+                  },
+                  {
+                    "option": "ETA Canadense"
+                  },
+                  {
+                    "option": "Visto Chines"
+                  }
+                ]
+              },
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Nome completo",
+              "placeholder": "William Scarpelli",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "CPF",
+              "placeholder": "254.123.321-69",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "email",
+              "placeholder": "email@email.com",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "whats",
+              "placeholder": "5511988272170",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Quantidade ?",
+              "placeholder": "{{qtdade}}",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Endereço completo",
+              "placeholder": "rua 1, nº2 bairro 3",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Forma pagamento",
+              "fieldType": "dropdown",
+              "fieldOptions": {
+                "values": [
+                  {
+                    "option": "Débito"
+                  },
+                  {
+                    "option": "Crédito"
+                  },
+                  {
+                    "option": "PIX"
+                  },
+                  {
+                    "option": "Dinheiro"
+                  },
+                  {
+                    "option": "Devolução"
+                  }
+                ]
+              },
+              "requiredField": true
+            }
+          ]
+        },
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "dec61ea3-54f2-4678-9928-0d281ac63b90",
+      "name": "n8n Form Trigger",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.1,
+      "position": [
+        -2000,
+        80
+      ],
+      "webhookId": "1704902c-f55c-4383-914e-09714fac3f55"
+    },
+    {
+      "parameters": {
+        "jsCode": "function numeroPorExtenso(numero) {\n    const unidades = [\"\", \"um\", \"dois\", \"três\", \"quatro\", \"cinco\", \"seis\", \"sete\", \"oito\", \"nove\"];\n    const especiais = [\"dez\", \"onze\", \"doze\", \"treze\", \"quatorze\", \"quinze\", \"dezesseis\", \"dezessete\", \"dezoito\", \"dezenove\"];\n    const dezenas = [\"\", \"\", \"vinte\", \"trinta\", \"quarenta\", \"cinquenta\", \"sessenta\", \"setenta\", \"oitenta\", \"noventa\"];\n    const centenas = [\"\", \"cento\", \"duzentos\", \"trezentos\", \"quatrocentos\", \"quinhentos\", \"seiscentos\", \"setecentos\", \"oitocentos\", \"novecentos\"];\n\n    if (numero === 0) return \"zero\";\n\n    let extenso = \"\";\n\n    if (numero >= 1000) {\n        const milhar = Math.floor(numero / 1000);\n        extenso += (milhar === 1 ? \"mil\" : numeroPorExtenso(milhar) + \" mil\");\n        numero %= 1000;\n    }\n\n    if (numero >= 100) {\n        const centena = Math.floor(numero / 100);\n        extenso += (extenso ? \" \" : \"\") + (centena === 1 && numero % 100 === 0 ? \"cem\" : centenas[centena]);\n        numero %= 100;\n    }\n\n    if (numero >= 20) {\n        const dezena = Math.floor(numero / 10);\n        extenso += (extenso ? \" e \" : \"\") + dezenas[dezena];\n        numero %= 10;\n    }\n\n    if (numero >= 10) {\n        extenso += (extenso ? \" e \" : \"\") + especiais[numero - 10];\n        return extenso;\n    }\n\n    if (numero > 0) {\n        extenso += (extenso ? \" e \" : \"\") + unidades[numero];\n    }\n\n    return extenso;\n}\n\nfunction valorPorExtenso(valor) {\n    const reais = Math.floor(valor);\n    const centavos = Math.round((valor - reais) * 100);\n\n    let extenso = numeroPorExtenso(reais) + (reais === 1 ? \" real\" : \" reais\");\n\n    if (centavos > 0) {\n        extenso += \" e \" + numeroPorExtenso(centavos) + (centavos === 1 ? \" centavo\" : \" centavos\");\n    }\n\n    return extenso;\n}\n\n// Exemplo de uso\nconst valor = $('Edit Fields').item.json.preco; // Insira o valor que deseja converter\nconst x_pe = valorPorExtenso(valor);\nreturn { valorPorExtenso: x_pe };\n"
+      },
+      "id": "adeab599-8a1c-4339-b736-e84c12f81eb9",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        620,
+        -800
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "name": "=#  FAZER USA - {{ $json['Nome completo'] }} {{ $json.grupo }} - {{ $json.whats }}",
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1KDP889CRWkxR9-Hcx4Jq4Lu6bcf8lHlj",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "43b9b37c-7a8c-4074-97ee-639aacebec5d",
+      "name": "Cria pasta do cliente",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        0,
+        -780
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "copy",
+        "fileId": {
+          "__rl": true,
+          "value": "1gQS2Hgu9VvjV8cUbXWW5WsI_IEO2EY-s2QT8xaSS9Hk",
+          "mode": "id"
+        },
+        "name": "=recibo {{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+        "sameFolder": false,
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "07ed573c-b636-4e50-84a0-d9930e1e1901",
+      "name": "copia recibo para a pasta",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        200,
+        -800
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dba176e7-285b-4302-93d1-81f115765c94",
+              "name": "=preco",
+              "value": "={{    $('n8n Form Trigger').item.json['Quantidade ?'] == 1      ? 320     : $('n8n Form Trigger').item.json['Quantidade ?'] == 600        ? 160        : $('n8n Form Trigger').item.json['Quantidade ?'] * 280  }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "e935a9d8-74e8-4ad0-bfe1-8ecb90db5316",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        420,
+        -820
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "3516810b-ebd6-45c7-89f8-39b48a6e13f4",
+      "name": "No Operation, do nothing1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        -1000,
+        380
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "91fa0ddd-94a2-45f9-9e7b-512778345698",
+              "name": "Data",
+              "value": "={{ new Date($('n8n Form Trigger').item.json.submittedAt).toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' }) }}\n",
+              "type": "string"
+            },
+            {
+              "id": "f7dda837-a589-4072-8ac0-47a678ccfb0a",
+              "name": "Qtdade",
+              "value": "={{ $('n8n Form Trigger').item.json['Quantidade ?'] }}",
+              "type": "string"
+            },
+            {
+              "id": "95569727-077c-40e0-9d20-fc1231b80113",
+              "name": "Forma Pgto",
+              "value": "={{ $('n8n Form Trigger').item.json['Forma pagamento'] }}",
+              "type": "string"
+            },
+            {
+              "id": "10933a61-cf02-4581-978a-a915d38a8e9a",
+              "name": "Nome completo",
+              "value": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "type": "string"
+            },
+            {
+              "id": "b71a9245-a8f9-4c6a-a94c-22022bd63dff",
+              "name": "Fone",
+              "value": "={{ $('n8n Form Trigger').item.json.whats }}",
+              "type": "string"
+            },
+            {
+              "id": "2da9b29d-da38-42c2-8d1f-d60c5df5bbe0",
+              "name": "E-mail",
+              "value": "={{ $('n8n Form Trigger').item.json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "f8bfe5bc-4cec-4a8d-a8a7-715162a4b079",
+              "name": "Valor",
+              "value": "={{ $('Edit Fields').item.json.preco  }}",
+              "type": "number"
+            },
+            {
+              "id": "3516e8ed-2061-40bb-a815-e222cc72deb2",
+              "name": "Serviços",
+              "value": "={{ $('n8n Form Trigger').item.json['Serviço contratado?'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {
+          "ignoreConversionErrors": true
+        }
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1060,
+        -900
+      ],
+      "id": "136a6925-50a3-402a-9b7c-9144fcad5ad3",
+      "name": "Campos"
+    },
+    {
+      "parameters": {
+        "jsCode": "function numeroPorExtenso(numero) {\n    const unidades = [\"\", \"um\", \"dois\", \"três\", \"quatro\", \"cinco\", \"seis\", \"sete\", \"oito\", \"nove\"];\n    const especiais = [\"dez\", \"onze\", \"doze\", \"treze\", \"quatorze\", \"quinze\", \"dezesseis\", \"dezessete\", \"dezoito\", \"dezenove\"];\n    const dezenas = [\"\", \"\", \"vinte\", \"trinta\", \"quarenta\", \"cinquenta\", \"sessenta\", \"setenta\", \"oitenta\", \"noventa\"];\n    const centenas = [\"\", \"cento\", \"duzentos\", \"trezentos\", \"quatrocentos\", \"quinhentos\", \"seiscentos\", \"setecentos\", \"oitocentos\", \"novecentos\"];\n\n    if (numero === 0) return \"zero\";\n\n    let extenso = \"\";\n\n    if (numero >= 1000) {\n        const milhar = Math.floor(numero / 1000);\n        extenso += (milhar === 1 ? \"mil\" : numeroPorExtenso(milhar) + \" mil\");\n        numero %= 1000;\n    }\n\n    if (numero >= 100) {\n        const centena = Math.floor(numero / 100);\n        extenso += (extenso ? \" \" : \"\") + (centena === 1 && numero % 100 === 0 ? \"cem\" : centenas[centena]);\n        numero %= 100;\n    }\n\n    if (numero >= 20) {\n        const dezena = Math.floor(numero / 10);\n        extenso += (extenso ? \" e \" : \"\") + dezenas[dezena];\n        numero %= 10;\n    }\n\n    if (numero >= 10) {\n        extenso += (extenso ? \" e \" : \"\") + especiais[numero - 10];\n        return extenso;\n    }\n\n    if (numero > 0) {\n        extenso += (extenso ? \" e \" : \"\") + unidades[numero];\n    }\n\n    return extenso;\n}\n\nfunction valorPorExtenso(valor) {\n    const reais = Math.floor(valor);\n    const centavos = Math.round((valor - reais) * 100);\n\n    let extenso = numeroPorExtenso(reais) + (reais === 1 ? \" real\" : \" reais\");\n\n    if (centavos > 0) {\n        extenso += \" e \" + numeroPorExtenso(centavos) + (centavos === 1 ? \" centavo\" : \" centavos\");\n    }\n\n    return extenso;\n}\n\n// Exemplo de uso\nconst valor = $('Edit Fields1').item.json.preco; // Insira o valor que deseja converter\nconst x_pe = valorPorExtenso(valor);\nreturn { valorPorExtenso: x_pe };\n"
+      },
+      "id": "b3c84ff6-69e1-4fbb-9989-1b997852a20d",
+      "name": "Code1",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        620,
+        -1360
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "name": "=#  FAZER PASS - {{ $json['Nome completo'] }} {{ $json.grupo }} - {{ $json.whats }}",
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1KDP889CRWkxR9-Hcx4Jq4Lu6bcf8lHlj",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "72c8895d-45a9-46ce-aafb-b4a2fcc9d1e0",
+      "name": "Cria pasta do cliente1",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        40,
+        -1360
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "copy",
+        "fileId": {
+          "__rl": true,
+          "value": "1gQS2Hgu9VvjV8cUbXWW5WsI_IEO2EY-s2QT8xaSS9Hk",
+          "mode": "id"
+        },
+        "name": "=recibo {{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+        "sameFolder": false,
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "f37ead5e-5223-43db-bdb9-23359bacd1b2",
+      "name": "copia recibo para a pasta1",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        220,
+        -1360
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dba176e7-285b-4302-93d1-81f115765c94",
+              "name": "=preco",
+              "value": "={{    $('n8n Form Trigger').item.json['Quantidade ?'] == 1      ? 90      : $('n8n Form Trigger').item.json['Quantidade ?'] == 2        ? 160        : $('n8n Form Trigger').item.json['Quantidade ?'] * 2  }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5b731201-0836-4fc5-a2d3-1c4250493b0c",
+      "name": "Edit Fields1",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        440,
+        -1360
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "91fa0ddd-94a2-45f9-9e7b-512778345698",
+              "name": "Data",
+              "value": "={{ new Date($('n8n Form Trigger').item.json.submittedAt).toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' }) }}\n",
+              "type": "string"
+            },
+            {
+              "id": "f7dda837-a589-4072-8ac0-47a678ccfb0a",
+              "name": "Qtdade",
+              "value": "={{ $('n8n Form Trigger').item.json['Quantidade ?'] }}",
+              "type": "string"
+            },
+            {
+              "id": "95569727-077c-40e0-9d20-fc1231b80113",
+              "name": "Forma Pgto",
+              "value": "={{ $('n8n Form Trigger').item.json['Forma pagamento'] }}",
+              "type": "string"
+            },
+            {
+              "id": "10933a61-cf02-4581-978a-a915d38a8e9a",
+              "name": "Nome completo",
+              "value": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "type": "string"
+            },
+            {
+              "id": "b71a9245-a8f9-4c6a-a94c-22022bd63dff",
+              "name": "Fone",
+              "value": "={{ $('n8n Form Trigger').item.json.whats }}",
+              "type": "string"
+            },
+            {
+              "id": "2da9b29d-da38-42c2-8d1f-d60c5df5bbe0",
+              "name": "E-mail",
+              "value": "={{ $('n8n Form Trigger').item.json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "f8bfe5bc-4cec-4a8d-a8a7-715162a4b079",
+              "name": "Valor",
+              "value": "={{ $('Edit Fields1').item.json.preco }}",
+              "type": "number"
+            },
+            {
+              "id": "363d5e04-585a-428c-8971-9dfe7379e629",
+              "name": "Serviços",
+              "value": "={{ $('n8n Form Trigger').item.json['Serviço contratado?'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {
+          "ignoreConversionErrors": true
+        }
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1080,
+        -1460
+      ],
+      "id": "8b799aa5-481d-49a8-8a72-708df6b0285b",
+      "name": "Campos1"
+    },
+    {
+      "parameters": {
+        "jsCode": "function numeroPorExtenso(numero) {\n    const unidades = [\"\", \"um\", \"dois\", \"três\", \"quatro\", \"cinco\", \"seis\", \"sete\", \"oito\", \"nove\"];\n    const especiais = [\"dez\", \"onze\", \"doze\", \"treze\", \"quatorze\", \"quinze\", \"dezesseis\", \"dezessete\", \"dezoito\", \"dezenove\"];\n    const dezenas = [\"\", \"\", \"vinte\", \"trinta\", \"quarenta\", \"cinquenta\", \"sessenta\", \"setenta\", \"oitenta\", \"noventa\"];\n    const centenas = [\"\", \"cento\", \"duzentos\", \"trezentos\", \"quatrocentos\", \"quinhentos\", \"seiscentos\", \"setecentos\", \"oitocentos\", \"novecentos\"];\n\n    if (numero === 0) return \"zero\";\n\n    let extenso = \"\";\n\n    if (numero >= 1000) {\n        const milhar = Math.floor(numero / 1000);\n        extenso += (milhar === 1 ? \"mil\" : numeroPorExtenso(milhar) + \" mil\");\n        numero %= 1000;\n    }\n\n    if (numero >= 100) {\n        const centena = Math.floor(numero / 100);\n        extenso += (extenso ? \" \" : \"\") + (centena === 1 && numero % 100 === 0 ? \"cem\" : centenas[centena]);\n        numero %= 100;\n    }\n\n    if (numero >= 20) {\n        const dezena = Math.floor(numero / 10);\n        extenso += (extenso ? \" e \" : \"\") + dezenas[dezena];\n        numero %= 10;\n    }\n\n    if (numero >= 10) {\n        extenso += (extenso ? \" e \" : \"\") + especiais[numero - 10];\n        return extenso;\n    }\n\n    if (numero > 0) {\n        extenso += (extenso ? \" e \" : \"\") + unidades[numero];\n    }\n\n    return extenso;\n}\n\nfunction valorPorExtenso(valor) {\n    const reais = Math.floor(valor);\n    const centavos = Math.round((valor - reais) * 100);\n\n    let extenso = numeroPorExtenso(reais) + (reais === 1 ? \" real\" : \" reais\");\n\n    if (centavos > 0) {\n        extenso += \" e \" + numeroPorExtenso(centavos) + (centavos === 1 ? \" centavo\" : \" centavos\");\n    }\n\n    return extenso;\n}\n\n// Exemplo de uso\nconst valor =( $('Edit Fields2').first().json.preco * $('n8n Form Trigger').first().json['Quantidade ?']); // Insira o valor que deseja converter\nconst x_pe = valorPorExtenso(valor);\nreturn { valorPorExtenso: x_pe };\n"
+      },
+      "id": "ad285392-deff-4ea1-870c-72815288049d",
+      "name": "Code2",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        680,
+        -300
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "name": "=#  FAZER AUS - {{ $json['Nome completo'] }} {{ $json.grupo }} - {{ $json.whats }}",
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1KDP889CRWkxR9-Hcx4Jq4Lu6bcf8lHlj",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "f66d04b4-7833-4a4a-a8d5-1883c3004378",
+      "name": "Cria pasta do cliente2",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -220,
+        -300
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "copy",
+        "fileId": {
+          "__rl": true,
+          "value": "1gQS2Hgu9VvjV8cUbXWW5WsI_IEO2EY-s2QT8xaSS9Hk",
+          "mode": "id"
+        },
+        "name": "=recibo {{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+        "sameFolder": false,
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "6d693382-1035-44ee-97a2-cc088fbf265b",
+      "name": "copia recibo para a pasta2",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        60,
+        -320
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {},
+      "id": "fda5ab1f-7488-43fd-ac04-c97f2d2aa8e0",
+      "name": "No Operation, do nothing3",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        2780,
+        -340
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dba176e7-285b-4302-93d1-81f115765c94",
+              "name": "=preco",
+              "value": "=400",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3e344be8-34b5-4889-a6d3-dff7d72aebfb",
+      "name": "Edit Fields2",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        380,
+        -300
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "91fa0ddd-94a2-45f9-9e7b-512778345698",
+              "name": "Data",
+              "value": "={{ new Date($('n8n Form Trigger').item.json.submittedAt).toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' }) }}\n",
+              "type": "string"
+            },
+            {
+              "id": "f7dda837-a589-4072-8ac0-47a678ccfb0a",
+              "name": "Qtdade",
+              "value": "={{ $('n8n Form Trigger').item.json['Quantidade ?'] }}",
+              "type": "string"
+            },
+            {
+              "id": "95569727-077c-40e0-9d20-fc1231b80113",
+              "name": "Forma Pgto",
+              "value": "={{ $('n8n Form Trigger').item.json['Forma pagamento'] }}",
+              "type": "string"
+            },
+            {
+              "id": "10933a61-cf02-4581-978a-a915d38a8e9a",
+              "name": "Nome completo",
+              "value": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "type": "string"
+            },
+            {
+              "id": "b71a9245-a8f9-4c6a-a94c-22022bd63dff",
+              "name": "Fone",
+              "value": "={{ $('n8n Form Trigger').item.json.whats }}",
+              "type": "string"
+            },
+            {
+              "id": "2da9b29d-da38-42c2-8d1f-d60c5df5bbe0",
+              "name": "E-mail",
+              "value": "={{ $('n8n Form Trigger').item.json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "f8bfe5bc-4cec-4a8d-a8a7-715162a4b079",
+              "name": "Valor",
+              "value": "={{ $('Edit Fields2').item.json.preco * $('n8n Form Trigger').item.json['Quantidade ?'] }}",
+              "type": "number"
+            },
+            {
+              "id": "d1f1c577-e243-4bde-9273-4e8b3f481a4f",
+              "name": "Serviços",
+              "value": "={{ $('n8n Form Trigger').item.json['Serviço contratado?'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {
+          "ignoreConversionErrors": true
+        }
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1160,
+        -400
+      ],
+      "id": "0efa407b-739f-40d3-939d-6e6631f8b113",
+      "name": "Campos2"
+    },
+    {
+      "parameters": {
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "1PDWQGz50J8ZmDxNZf19WJJJ2bWiY39CtiGFGeBgsIcw",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": 729249208,
+          "mode": "list",
+          "cachedResultName": "Dezembro",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/1PDWQGz50J8ZmDxNZf19WJJJ2bWiY39CtiGFGeBgsIcw/edit#gid=729249208"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [
+            "Controle de Pagamentos Megabuy"
+          ],
+          "schema": [
+            {
+              "id": "Controle de Pagamentos Megabuy",
+              "displayName": "Controle de Pagamentos Megabuy",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true,
+              "removed": false
+            }
+          ]
+        },
+        "options": {
+          "cellFormat": "USER_ENTERED",
+          "locationDefine": {
+            "values": {
+              "headerRow": 2
+            }
+          },
+          "useAppend": true
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2600,
+        -320
+      ],
+      "id": "ec569f6e-9f70-4048-8c84-6282b2721e3e",
+      "name": "Google Sheets2",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "fzfV64LpzABP19xE",
+          "name": "Google Sheets account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "jsCode": "function numeroPorExtenso(numero) {\n    const unidades = [\"\", \"um\", \"dois\", \"três\", \"quatro\", \"cinco\", \"seis\", \"sete\", \"oito\", \"nove\"];\n    const especiais = [\"dez\", \"onze\", \"doze\", \"treze\", \"quatorze\", \"quinze\", \"dezesseis\", \"dezessete\", \"dezoito\", \"dezenove\"];\n    const dezenas = [\"\", \"\", \"vinte\", \"trinta\", \"quarenta\", \"cinquenta\", \"sessenta\", \"setenta\", \"oitenta\", \"noventa\"];\n    const centenas = [\"\", \"cento\", \"duzentos\", \"trezentos\", \"quatrocentos\", \"quinhentos\", \"seiscentos\", \"setecentos\", \"oitocentos\", \"novecentos\"];\n\n    if (numero === 0) return \"zero\";\n\n    let extenso = \"\";\n\n    if (numero >= 1000) {\n        const milhar = Math.floor(numero / 1000);\n        extenso += (milhar === 1 ? \"mil\" : numeroPorExtenso(milhar) + \" mil\");\n        numero %= 1000;\n    }\n\n    if (numero >= 100) {\n        const centena = Math.floor(numero / 100);\n        extenso += (extenso ? \" \" : \"\") + (centena === 1 && numero % 100 === 0 ? \"cem\" : centenas[centena]);\n        numero %= 100;\n    }\n\n    if (numero >= 20) {\n        const dezena = Math.floor(numero / 10);\n        extenso += (extenso ? \" e \" : \"\") + dezenas[dezena];\n        numero %= 10;\n    }\n\n    if (numero >= 10) {\n        extenso += (extenso ? \" e \" : \"\") + especiais[numero - 10];\n        return extenso;\n    }\n\n    if (numero > 0) {\n        extenso += (extenso ? \" e \" : \"\") + unidades[numero];\n    }\n\n    return extenso;\n}\n\nfunction valorPorExtenso(valor) {\n    const reais = Math.floor(valor);\n    const centavos = Math.round((valor - reais) * 100);\n\n    let extenso = numeroPorExtenso(reais) + (reais === 1 ? \" real\" : \" reais\");\n\n    if (centavos > 0) {\n        extenso += \" e \" + numeroPorExtenso(centavos) + (centavos === 1 ? \" centavo\" : \" centavos\");\n    }\n\n    return extenso;\n}\n\n// Exemplo de uso\nconst valor =( $('Edit Fields2').first().json.preco * $('n8n Form Trigger').first().json['Quantidade ?']); // Insira o valor que deseja converter\nconst x_pe = valorPorExtenso(valor);\nreturn { valorPorExtenso: x_pe };\n"
+      },
+      "id": "4e92cbb6-2d5c-4c67-bcec-150613b2c6b3",
+      "name": "Code3",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        360,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "name": "=#  FAZER ESTA - {{ $json['Nome completo'] }} {{ $json.grupo }} - {{ $json.whats }}",
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1KDP889CRWkxR9-Hcx4Jq4Lu6bcf8lHlj",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "7a55d1b0-931b-43ce-a4c5-63a484f1e946",
+      "name": "Cria pasta do cliente3",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -320,
+        200
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "copy",
+        "fileId": {
+          "__rl": true,
+          "value": "1gQS2Hgu9VvjV8cUbXWW5WsI_IEO2EY-s2QT8xaSS9Hk",
+          "mode": "id"
+        },
+        "name": "=recibo {{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+        "sameFolder": false,
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "fb85a551-778c-4345-bfba-599800ca7498",
+      "name": "copia recibo para a pasta3",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -80,
+        200
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dba176e7-285b-4302-93d1-81f115765c94",
+              "name": "=preco",
+              "value": "=160",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "7668d409-ccd4-45d7-a8a6-4caba3683407",
+      "name": "Edit Fields3",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        120,
+        200
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "91fa0ddd-94a2-45f9-9e7b-512778345698",
+              "name": "Data",
+              "value": "={{ new Date($('n8n Form Trigger').item.json.submittedAt).toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' }) }}\n",
+              "type": "string"
+            },
+            {
+              "id": "f7dda837-a589-4072-8ac0-47a678ccfb0a",
+              "name": "Qtdade",
+              "value": "={{ $('n8n Form Trigger').item.json['Quantidade ?'] }}",
+              "type": "string"
+            },
+            {
+              "id": "95569727-077c-40e0-9d20-fc1231b80113",
+              "name": "Forma Pgto",
+              "value": "={{ $('n8n Form Trigger').item.json['Forma pagamento'] }}",
+              "type": "string"
+            },
+            {
+              "id": "10933a61-cf02-4581-978a-a915d38a8e9a",
+              "name": "Nome completo",
+              "value": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "type": "string"
+            },
+            {
+              "id": "b71a9245-a8f9-4c6a-a94c-22022bd63dff",
+              "name": "Fone",
+              "value": "={{ $('n8n Form Trigger').item.json.whats }}",
+              "type": "string"
+            },
+            {
+              "id": "2da9b29d-da38-42c2-8d1f-d60c5df5bbe0",
+              "name": "E-mail",
+              "value": "={{ $('n8n Form Trigger').item.json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "f8bfe5bc-4cec-4a8d-a8a7-715162a4b079",
+              "name": "Valor",
+              "value": "={{ $('Edit Fields3').item.json.preco }}",
+              "type": "number"
+            },
+            {
+              "id": "1c9bbc7e-3c08-4516-8253-2bbc35202f21",
+              "name": "Serviços",
+              "value": "={{ $('n8n Form Trigger').item.json['Serviço contratado?'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {
+          "ignoreConversionErrors": true
+        }
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        800,
+        100
+      ],
+      "id": "b51cffbd-1e1a-4e24-992f-10f3ac431902",
+      "name": "Campos3"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8f367dba-582b-44ab-9c88-f0f7413f6605",
+              "leftValue": "={{ $json['Nome completo'] }}",
+              "rightValue": "^[A-ZÀ-Ý][a-zà-ÿ]+(?: [A-ZÀ-Ý][a-zà-ÿ]+)+$",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "f288434e-0358-4f16-92a9-b976121c435c",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1620,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "jsCode": "function numeroPorExtenso(numero) {\n    const unidades = [\"\", \"um\", \"dois\", \"três\", \"quatro\", \"cinco\", \"seis\", \"sete\", \"oito\", \"nove\"];\n    const especiais = [\"dez\", \"onze\", \"doze\", \"treze\", \"quatorze\", \"quinze\", \"dezesseis\", \"dezessete\", \"dezoito\", \"dezenove\"];\n    const dezenas = [\"\", \"\", \"vinte\", \"trinta\", \"quarenta\", \"cinquenta\", \"sessenta\", \"setenta\", \"oitenta\", \"noventa\"];\n    const centenas = [\"\", \"cento\", \"duzentos\", \"trezentos\", \"quatrocentos\", \"quinhentos\", \"seiscentos\", \"setecentos\", \"oitocentos\", \"novecentos\"];\n\n    if (numero === 0) return \"zero\";\n\n    let extenso = \"\";\n\n    if (numero >= 1000) {\n        const milhar = Math.floor(numero / 1000);\n        extenso += (milhar === 1 ? \"mil\" : numeroPorExtenso(milhar) + \" mil\");\n        numero %= 1000;\n    }\n\n    if (numero >= 100) {\n        const centena = Math.floor(numero / 100);\n        extenso += (extenso ? \" \" : \"\") + (centena === 1 && numero % 100 === 0 ? \"cem\" : centenas[centena]);\n        numero %= 100;\n    }\n\n    if (numero >= 20) {\n        const dezena = Math.floor(numero / 10);\n        extenso += (extenso ? \" e \" : \"\") + dezenas[dezena];\n        numero %= 10;\n    }\n\n    if (numero >= 10) {\n        extenso += (extenso ? \" e \" : \"\") + especiais[numero - 10];\n        return extenso;\n    }\n\n    if (numero > 0) {\n        extenso += (extenso ? \" e \" : \"\") + unidades[numero];\n    }\n\n    return extenso;\n}\n\nfunction valorPorExtenso(valor) {\n    const reais = Math.floor(valor);\n    const centavos = Math.round((valor - reais) * 100);\n\n    let extenso = numeroPorExtenso(reais) + (reais === 1 ? \" real\" : \" reais\");\n\n    if (centavos > 0) {\n        extenso += \" e \" + numeroPorExtenso(centavos) + (centavos === 1 ? \" centavo\" : \" centavos\");\n    }\n\n    return extenso;\n}\n\n// Exemplo de uso\nconst valor =( $('Edit Fields2').first().json.preco * $('n8n Form Trigger').first().json['Quantidade ?']); // Insira o valor que deseja converter\nconst x_pe = valorPorExtenso(valor);\nreturn { valorPorExtenso: x_pe };\n"
+      },
+      "id": "af2c58df-094e-4fc4-8bc4-e7a2d3a2958f",
+      "name": "Code4",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        440,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "name": "=#  FAZER ETA - {{ $json['Nome completo'] }} {{ $json.grupo }} - {{ $json.whats }}",
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1KDP889CRWkxR9-Hcx4Jq4Lu6bcf8lHlj",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "e6355367-38b1-411f-902e-6d2366294a49",
+      "name": "Cria pasta do cliente4",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -380,
+        620
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "copy",
+        "fileId": {
+          "__rl": true,
+          "value": "1gQS2Hgu9VvjV8cUbXWW5WsI_IEO2EY-s2QT8xaSS9Hk",
+          "mode": "id"
+        },
+        "name": "=recibo {{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+        "sameFolder": false,
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "55164abc-5924-4a3e-bf61-9512c24bb1f9",
+      "name": "copia recibo para a pasta4",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -80,
+        620
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dba176e7-285b-4302-93d1-81f115765c94",
+              "name": "=preco",
+              "value": "={{    $('n8n Form Trigger').item.json['Quantidade ?'] == 1      ? 320      : $('n8n Form Trigger').item.json['Quantidade ?'] == 2        ? 600        : $('n8n Form Trigger').item.json['Quantidade ?'] * 280  }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "caa81122-aa77-435e-a3a0-9060c4f3664b",
+      "name": "Edit Fields4",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        180,
+        600
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "91fa0ddd-94a2-45f9-9e7b-512778345698",
+              "name": "Data",
+              "value": "={{ new Date($('n8n Form Trigger').item.json.submittedAt).toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' }) }}\n",
+              "type": "string"
+            },
+            {
+              "id": "f7dda837-a589-4072-8ac0-47a678ccfb0a",
+              "name": "Qtdade",
+              "value": "={{ $('n8n Form Trigger').item.json['Quantidade ?'] }}",
+              "type": "string"
+            },
+            {
+              "id": "95569727-077c-40e0-9d20-fc1231b80113",
+              "name": "Forma Pgto",
+              "value": "={{ $('n8n Form Trigger').item.json['Forma pagamento'] }}",
+              "type": "string"
+            },
+            {
+              "id": "10933a61-cf02-4581-978a-a915d38a8e9a",
+              "name": "Nome completo",
+              "value": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "type": "string"
+            },
+            {
+              "id": "b71a9245-a8f9-4c6a-a94c-22022bd63dff",
+              "name": "Fone",
+              "value": "={{ $('n8n Form Trigger').item.json.whats }}",
+              "type": "string"
+            },
+            {
+              "id": "2da9b29d-da38-42c2-8d1f-d60c5df5bbe0",
+              "name": "E-mail",
+              "value": "={{ $('n8n Form Trigger').item.json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "f8bfe5bc-4cec-4a8d-a8a7-715162a4b079",
+              "name": "Valor",
+              "value": "={{ $('Edit Fields4').item.json.preco  }}",
+              "type": "number"
+            },
+            {
+              "id": "b51623fa-6880-4974-b1fc-9dd3bb0835f2",
+              "name": "Serviços",
+              "value": "={{ $('n8n Form Trigger').item.json['Serviço contratado?'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {
+          "ignoreConversionErrors": true
+        }
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        960,
+        540
+      ],
+      "id": "86f049d6-d588-4510-b620-a617d0b2baaa",
+      "name": "Campos4"
+    },
+    {
+      "parameters": {
+        "jsCode": "function numeroPorExtenso(numero) {\n    const unidades = [\"\", \"um\", \"dois\", \"três\", \"quatro\", \"cinco\", \"seis\", \"sete\", \"oito\", \"nove\"];\n    const especiais = [\"dez\", \"onze\", \"doze\", \"treze\", \"quatorze\", \"quinze\", \"dezesseis\", \"dezessete\", \"dezoito\", \"dezenove\"];\n    const dezenas = [\"\", \"\", \"vinte\", \"trinta\", \"quarenta\", \"cinquenta\", \"sessenta\", \"setenta\", \"oitenta\", \"noventa\"];\n    const centenas = [\"\", \"cento\", \"duzentos\", \"trezentos\", \"quatrocentos\", \"quinhentos\", \"seiscentos\", \"setecentos\", \"oitocentos\", \"novecentos\"];\n\n    if (numero === 0) return \"zero\";\n\n    let extenso = \"\";\n\n    if (numero >= 1000) {\n        const milhar = Math.floor(numero / 1000);\n        extenso += (milhar === 1 ? \"mil\" : numeroPorExtenso(milhar) + \" mil\");\n        numero %= 1000;\n    }\n\n    if (numero >= 100) {\n        const centena = Math.floor(numero / 100);\n        extenso += (extenso ? \" \" : \"\") + (centena === 1 && numero % 100 === 0 ? \"cem\" : centenas[centena]);\n        numero %= 100;\n    }\n\n    if (numero >= 20) {\n        const dezena = Math.floor(numero / 10);\n        extenso += (extenso ? \" e \" : \"\") + dezenas[dezena];\n        numero %= 10;\n    }\n\n    if (numero >= 10) {\n        extenso += (extenso ? \" e \" : \"\") + especiais[numero - 10];\n        return extenso;\n    }\n\n    if (numero > 0) {\n        extenso += (extenso ? \" e \" : \"\") + unidades[numero];\n    }\n\n    return extenso;\n}\n\nfunction valorPorExtenso(valor) {\n    const reais = Math.floor(valor);\n    const centavos = Math.round((valor - reais) * 100);\n\n    let extenso = numeroPorExtenso(reais) + (reais === 1 ? \" real\" : \" reais\");\n\n    if (centavos > 0) {\n        extenso += \" e \" + numeroPorExtenso(centavos) + (centavos === 1 ? \" centavo\" : \" centavos\");\n    }\n\n    return extenso;\n}\n\n// Exemplo de uso\nconst valor =( $('Edit Fields2').first().json.preco * $('n8n Form Trigger').first().json['Quantidade ?']); // Insira o valor que deseja converter\nconst x_pe = valorPorExtenso(valor);\nreturn { valorPorExtenso: x_pe };\n"
+      },
+      "id": "7c5127f5-32fb-413d-b7a6-e9e9ecd30007",
+      "name": "Code5",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        520,
+        1000
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "name": "=#  FAZER CHN - {{ $json['Nome completo'] }} {{ $json.grupo }} - {{ $json.whats }}",
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "1KDP889CRWkxR9-Hcx4Jq4Lu6bcf8lHlj",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "05876462-43b2-42fe-9f23-ca007ed4ac50",
+      "name": "Cria pasta do cliente5",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        -340,
+        1040
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "copy",
+        "fileId": {
+          "__rl": true,
+          "value": "1gQS2Hgu9VvjV8cUbXWW5WsI_IEO2EY-s2QT8xaSS9Hk",
+          "mode": "id"
+        },
+        "name": "=recibo {{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+        "sameFolder": false,
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "={{ $json.id }}",
+          "mode": "id"
+        },
+        "options": {}
+      },
+      "id": "154fbf78-e8f4-4f6a-ae83-8bcee698a503",
+      "name": "copia recibo para a pasta5",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        0,
+        1020
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dba176e7-285b-4302-93d1-81f115765c94",
+              "name": "=preco",
+              "value": "=400",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "8acb2c17-132e-4dc5-85a2-2fbd97408214",
+      "name": "Edit Fields5",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        300,
+        960
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "91fa0ddd-94a2-45f9-9e7b-512778345698",
+              "name": "Data",
+              "value": "={{ new Date($('n8n Form Trigger').item.json.submittedAt).toLocaleDateString('pt-BR', { timeZone: 'America/Sao_Paulo' }) }}\n",
+              "type": "string"
+            },
+            {
+              "id": "f7dda837-a589-4072-8ac0-47a678ccfb0a",
+              "name": "Qtdade",
+              "value": "={{ $('n8n Form Trigger').item.json['Quantidade ?'] }}",
+              "type": "string"
+            },
+            {
+              "id": "95569727-077c-40e0-9d20-fc1231b80113",
+              "name": "Forma Pgto",
+              "value": "={{ $('n8n Form Trigger').item.json['Forma pagamento'] }}",
+              "type": "string"
+            },
+            {
+              "id": "10933a61-cf02-4581-978a-a915d38a8e9a",
+              "name": "Nome completo",
+              "value": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "type": "string"
+            },
+            {
+              "id": "b71a9245-a8f9-4c6a-a94c-22022bd63dff",
+              "name": "Fone",
+              "value": "={{ $('n8n Form Trigger').item.json.whats }}",
+              "type": "string"
+            },
+            {
+              "id": "2da9b29d-da38-42c2-8d1f-d60c5df5bbe0",
+              "name": "E-mail",
+              "value": "={{ $('n8n Form Trigger').item.json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "f8bfe5bc-4cec-4a8d-a8a7-715162a4b079",
+              "name": "Valor",
+              "value": "={{ $('Edit Fields5').item.json.preco  }}",
+              "type": "number"
+            },
+            {
+              "id": "b856b319-4ce0-4e1b-8566-5fd1a25d8ec0",
+              "name": "Serviços",
+              "value": "={{ $('n8n Form Trigger').item.json['Serviço contratado?'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {
+          "ignoreConversionErrors": true
+        }
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1120,
+        900
+      ],
+      "id": "a7d0dd94-d681-4109-8fda-4ba0b6de167c",
+      "name": "Campos5"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "={{ $('copia recibo para a pasta1').item.json.id }}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "replaceAll",
+              "text": "{{nome}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "matchCase": "={{ true }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{cpf}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.CPF }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{email}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.email }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{whats}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.whats }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{qtdade}}",
+              "replaceText": "= {{ $('n8n Form Trigger').item.json['Quantidade ?'] }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{price}}",
+              "replaceText": "={{ \n  $('n8n Form Trigger').item.json['Quantidade ?'] == 1 \n    ? 320 \n    : $('n8n Form Trigger').item.json['Quantidade ?'] == 2 \n      ? 600 \n      : $('n8n Form Trigger').item.json['Quantidade ?'] * 280\n}}\n"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{data_pe}}",
+              "replaceText": "={{ DateTime.now().setZone('America/Sao_Paulo').setLocale('pt-BR').toFormat('d \\'de\\' LLLL \\'de\\' yyyy') }}\n"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{x_pe}}",
+              "replaceText": "={{ $json.valorPorExtenso }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{servico}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Serviço contratado?'] }}"
+            }
+          ]
+        }
+      },
+      "id": "c6d4a251-5449-450b-b43d-9fef13c4bd0d",
+      "name": "Google Docs1",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        -1260
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "cQ7MTspYcgHpbKT3",
+          "name": "Google Docs account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "leftValue": "={{ $json['Serviço contratado?'] }}",
+                    "rightValue": "Passaporte Brasileiro",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "pass"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "c27a406d-88ea-4f78-b611-86ded1033140",
+                    "leftValue": "={{ $json['Serviço contratado?'] }}",
+                    "rightValue": "Visto Americano",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "usa"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "f97597ba-9367-464e-a9e8-7854cea44185",
+                    "leftValue": "={{ $json['Serviço contratado?'] }}",
+                    "rightValue": "Visto Australiano",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "aus"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "6c231ffe-a865-4bcd-827d-149aefb5c6b4",
+                    "leftValue": "={{ $json['Serviço contratado?'] }}",
+                    "rightValue": "ESTA Americano",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "esta"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "eced28c3-b1be-4aea-8431-f9f5d68defa6",
+                    "leftValue": "={{ $json['Serviço contratado?'] }}",
+                    "rightValue": "ETA Canadense",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "eta"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "strict",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "cb3f09d0-7593-47b3-8478-3c7a0340915b",
+                    "leftValue": "={{ $json['Serviço contratado?'] }}",
+                    "rightValue": "Visto Chines",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "chn"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -1060,
+        -60
+      ],
+      "id": "23962b7d-4ebd-4b40-ae32-9cb8f72cb312",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "={{ $('copia recibo para a pasta2').item.json.id }}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "replaceAll",
+              "text": "{{nome}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "matchCase": "={{ true }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{cpf}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.CPF }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{email}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.email }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{whats}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.whats }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{qtdade}}",
+              "replaceText": "= {{ $('n8n Form Trigger').item.json['Quantidade ?'] }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{price}}",
+              "replaceText": "= {{ $('n8n Form Trigger').item.json['Quantidade ?']* 400 }}",
+              "matchCase": "={{ false }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{data_pe}}",
+              "replaceText": "={{ DateTime.now().setZone('America/Sao_Paulo').setLocale('pt-BR').toFormat('d \\'de\\' LLLL \\'de\\' yyyy') }}\n"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{x_pe}}",
+              "replaceText": "={{ $json.valorPorExtenso }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{servico}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Serviço contratado?'] }}"
+            }
+          ]
+        }
+      },
+      "id": "802eb251-58ab-4c79-ac43-ca916b93a82d",
+      "name": "Google Docs2",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        1180,
+        -200
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "cQ7MTspYcgHpbKT3",
+          "name": "Google Docs account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "={{ $('copia recibo para a pasta3').item.json.id }}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "replaceAll",
+              "text": "{{nome}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "matchCase": "={{ true }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{cpf}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.CPF }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{email}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.email }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{whats}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.whats }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{qtdade}}",
+              "replaceText": "= {{ $('n8n Form Trigger').item.json['Quantidade ?'] }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{price}}",
+              "replaceText": "= {{ $('n8n Form Trigger').item.json['Quantidade ?']*160 }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{data_pe}}",
+              "replaceText": "={{ DateTime.now().setZone('America/Sao_Paulo').setLocale('pt-BR').toFormat('d \\'de\\' LLLL \\'de\\' yyyy') }}\n"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{x_pe}}",
+              "replaceText": "={{ $json.valorPorExtenso }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{servico}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Serviço contratado?'] }}",
+              "matchCase": "={{ false }}"
+            }
+          ]
+        }
+      },
+      "id": "f61d0743-88df-4b80-a22d-cf8d5c148633",
+      "name": "Google Docs3",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        1100,
+        300
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "cQ7MTspYcgHpbKT3",
+          "name": "Google Docs account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "={{ $('copia recibo para a pasta4').item.json.id }}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "replaceAll",
+              "text": "{{nome}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "matchCase": "={{ true }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{cpf}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.CPF }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{email}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.email }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{whats}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.whats }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{qtdade}}",
+              "replaceText": "= {{ $('n8n Form Trigger').item.json['Quantidade ?'] }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{price}}",
+              "replaceText": "= {{ $('n8n Form Trigger').item.json['Quantidade ?']*160 }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{data_pe}}",
+              "replaceText": "={{ DateTime.now().setZone('America/Sao_Paulo').setLocale('pt-BR').toFormat('d \\'de\\' LLLL \\'de\\' yyyy') }}\n"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{x_pe}}",
+              "replaceText": "={{ $json.valorPorExtenso }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{servico}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Serviço contratado?'] }}"
+            }
+          ]
+        }
+      },
+      "id": "0c42b4bd-fd67-47e5-944b-d5e891504607",
+      "name": "Google Docs4",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        920,
+        720
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "cQ7MTspYcgHpbKT3",
+          "name": "Google Docs account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "={{ $('copia recibo para a pasta5').item.json.id }}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "replaceAll",
+              "text": "{{nome}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "matchCase": "={{ true }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{cpf}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.CPF }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{email}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.email }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{whats}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.whats }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{qtdade}}",
+              "replaceText": "= {{ $('n8n Form Trigger').item.json['Quantidade ?'] }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{price}}",
+              "replaceText": "= {{ $('n8n Form Trigger').item.json['Quantidade ?']*400 }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{data_pe}}",
+              "replaceText": "={{ DateTime.now().setZone('America/Sao_Paulo').setLocale('pt-BR').toFormat('d \\'de\\' LLLL \\'de\\' yyyy') }}\n"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{x_pe}}",
+              "replaceText": "={{ $json.valorPorExtenso }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{servico}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Serviço contratado?'] }}"
+            }
+          ]
+        }
+      },
+      "id": "f0b3de6b-d547-497a-9fa2-da4c8419f444",
+      "name": "Google Docs5",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        1020,
+        1140
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "cQ7MTspYcgHpbKT3",
+          "name": "Google Docs account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "85f6c1c7-5e39-4176-a8da-d32e0ac590d6",
+              "name": "grupo",
+              "value": "={{ $json['Quantidade ?'] > 1 ? '+' + $json['Quantidade ?'] : '' }}\n",
+              "type": "string"
+            },
+            {
+              "id": "c5546eb0-5876-42d0-9088-3a13c8df4b04",
+              "name": "Serviço contratado?",
+              "value": "={{ $json['Serviço contratado?'] }}",
+              "type": "string"
+            },
+            {
+              "id": "1f2b1c3f-3bb7-4329-a34e-8c353a35d93c",
+              "name": "Nome completo",
+              "value": "={{ $json['Nome completo'] }}{{ $json['Nome completo'] }}",
+              "type": "string"
+            },
+            {
+              "id": "7c300598-5b37-483f-ac95-36923a373ddc",
+              "name": "CPF",
+              "value": "={{ $json.CPF }}",
+              "type": "string"
+            },
+            {
+              "id": "4cdb9716-801a-401b-a83d-2c16e3a4d3b8",
+              "name": "email",
+              "value": "={{ $json.email }}",
+              "type": "string"
+            },
+            {
+              "id": "9596f0a1-ff23-4ec9-9123-66703298ec24",
+              "name": "whats",
+              "value": "={{ $json.whats }}",
+              "type": "string"
+            },
+            {
+              "id": "5915ec0b-1b47-486b-a61b-2e3a3f87a387",
+              "name": "Quantidade ?",
+              "value": "={{ $json['Quantidade ?'] }}",
+              "type": "string"
+            },
+            {
+              "id": "41e15b1d-cb0d-4b92-bf5e-d80456bf7e9f",
+              "name": "Endereço completo",
+              "value": "={{ $json['Endereço completo'] }}",
+              "type": "string"
+            },
+            {
+              "id": "7b7123ba-4ec3-4de4-ad45-1ed16642fde2",
+              "name": "Forma pagamento",
+              "value": "={{ $json['Forma pagamento'] }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1300,
+        20
+      ],
+      "id": "1d43d799-c167-43cd-a0b3-a6c5cbf8639a",
+      "name": "Edit Fields6"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        860,
+        -1260
+      ],
+      "id": "baaba32f-c06e-4062-a190-d6f94fbbdce8",
+      "name": "Wait",
+      "webhookId": "b6cc1332-99aa-4a02-b208-4887c33e0603"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        860,
+        -700
+      ],
+      "id": "31d32efb-5d38-4ad1-ab13-525f0cc5547d",
+      "name": "Wait1",
+      "webhookId": "2ae39009-3717-4241-ab88-626b9f166340"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        920,
+        -200
+      ],
+      "id": "458d6a9d-29fc-49b9-98f3-b8dc16ec46b7",
+      "name": "Wait2",
+      "webhookId": "5f68224e-c8f2-4212-b099-a3e27d7f12a0"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        840,
+        360
+      ],
+      "id": "1463afb2-1bb0-42ce-90d9-13099d4c3092",
+      "name": "Wait3",
+      "webhookId": "52541c60-3c65-4302-88f3-0e64b8e653a3"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        680,
+        720
+      ],
+      "id": "bf02f66d-cadc-41ca-8787-de455a72ca30",
+      "name": "Wait4",
+      "webhookId": "e6e834ae-0241-41c6-8cff-f910728e3820"
+    },
+    {
+      "parameters": {},
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        780,
+        1140
+      ],
+      "id": "76772bb4-52ee-4b40-a5fa-c686ac7c50c2",
+      "name": "Wait5",
+      "webhookId": "e827a207-da88-4054-b3fc-099da4b97314"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1",
+    "callerPolicy": "workflowsFromSameOwner",
+    "executionTimeout": 300
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-12-11T19:57:36.777Z",
+      "updatedAt": "2024-12-11T19:57:36.777Z",
+      "id": "PgZ89dUFuG5Rq72S",
+      "name": "TEMPLATE"
+    }
+  ],
+  "triggerCount": 2,
+  "updatedAt": "2024-12-09T15:45:50.873Z",
+  "versionId": "deb46d5d-9deb-4489-90ae-9c391f8d5766"
+}
