@@ -1,0 +1,682 @@
+{
+  "active": false,
+  "connections": {
+    "Converte Audio": {
+      "main": [
+        [
+          {
+            "node": "OpenAIAudio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Converte Imagem": {
+      "main": [
+        [
+          {
+            "node": "Imagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Converte Imagem1": {
+      "main": [
+        [
+          {
+            "node": "Imagem e Legenda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set base64": {
+      "main": [
+        [
+          {
+            "node": "Imagem com Legenda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrair Dados": {
+      "main": [
+        [
+          {
+            "node": "PDF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Converte PDF": {
+      "main": [
+        [
+          {
+            "node": "Extrair Dados",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extrair Dados1": {
+      "main": [
+        [
+          {
+            "node": "PDF e Legenda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Converte PDF1": {
+      "main": [
+        [
+          {
+            "node": "Extrair Dados1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Imagem com Legenda": {
+      "main": [
+        [
+          {
+            "node": "Converte Imagem1",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Converte Imagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Documento com Legenda": {
+      "main": [
+        [],
+        [
+          {
+            "node": "Converte PDF",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Base64": {
+      "main": [
+        [
+          {
+            "node": "Converte Audio",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Set Base64": {
+      "main": [
+        [
+          {
+            "node": "Documento com Legenda",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Tipo de Arquivo",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Tipo de Arquivo": {
+      "main": [
+        [],
+        [],
+        [],
+        [
+          {
+            "node": "Set base64",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Base64",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Set Base64",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2024-08-26T19:57:26.630Z",
+  "id": "07ve4R5aT5S0OIaV",
+  "isArchived": false,
+  "meta": null,
+  "name": "Base64_Conversor_MultiModal",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": ":base64",
+        "responseMode": "responseNode",
+        "options": {}
+      },
+      "id": "96b7156b-e9e0-4c2d-b651-252b159f1243",
+      "name": "Webhook",
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -840,
+        900
+      ],
+      "webhookId": "08998427-3761-4a9a-89fa-a43a5c14a4e7"
+    },
+    {
+      "parameters": {
+        "mode": "jsonToBinary",
+        "convertAllData": false,
+        "sourceKey": "base64",
+        "options": {
+          "dataIsBase64": true,
+          "encoding": "utf8",
+          "fileName": "teste.ogg",
+          "mimeType": "application/ogg"
+        }
+      },
+      "id": "5b3c92c4-443a-4400-bc44-9753620c17a8",
+      "name": "Converte Audio",
+      "type": "n8n-nodes-base.moveBinaryData",
+      "typeVersion": 1,
+      "position": [
+        460,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "jsonToBinary",
+        "convertAllData": false,
+        "sourceKey": "base64",
+        "destinationKey": "data2",
+        "options": {
+          "dataIsBase64": true,
+          "mimeType": "image/png"
+        }
+      },
+      "id": "516e17dd-094d-4add-a728-27cefb650b80",
+      "name": "Converte Imagem",
+      "type": "n8n-nodes-base.moveBinaryData",
+      "typeVersion": 1,
+      "position": [
+        460,
+        660
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "mode": "jsonToBinary",
+        "convertAllData": false,
+        "sourceKey": "base64",
+        "destinationKey": "data3",
+        "options": {
+          "dataIsBase64": true,
+          "mimeType": "image/png"
+        }
+      },
+      "id": "1ed0c0ca-e11d-4c8b-adbc-f0e29ec5ad8b",
+      "name": "Converte Imagem1",
+      "type": "n8n-nodes-base.moveBinaryData",
+      "typeVersion": 1,
+      "position": [
+        460,
+        460
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c332a102-7911-44c2-a37e-cdf642685166",
+              "name": "base64",
+              "value": "={{ $('Webhook').first().json.body.data.message.base64 }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "5518c7e3-d102-48dc-9cfd-856adf0ec3b9",
+      "name": "Set base64",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        0,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "binaryPropertyName": "data1",
+        "options": {}
+      },
+      "id": "ba98651d-8573-4efd-9ff9-05466dfbcbbd",
+      "name": "Extrair Dados",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        660,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "mode": "jsonToBinary",
+        "convertAllData": false,
+        "sourceKey": "base64",
+        "destinationKey": "data1",
+        "options": {
+          "dataIsBase64": true,
+          "mimeType": "application/pdf"
+        }
+      },
+      "id": "5866f4dc-d0d5-49bc-8fa0-f98964486bf5",
+      "name": "Converte PDF",
+      "type": "n8n-nodes-base.moveBinaryData",
+      "typeVersion": 1,
+      "position": [
+        460,
+        1280
+      ],
+      "alwaysOutputData": true
+    },
+    {
+      "parameters": {
+        "resource": "audio",
+        "operation": "transcribe",
+        "options": {}
+      },
+      "id": "8c9dcdd4-2fe9-4fbb-8e79-3bdc85fbf416",
+      "name": "OpenAIAudio",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.3,
+      "position": [
+        660,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "pdf",
+        "binaryPropertyName": "data4",
+        "options": {}
+      },
+      "id": "7f4d4478-4a22-4d04-838c-016fb0532cf6",
+      "name": "Extrair Dados1",
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        660,
+        1080
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "mode": "jsonToBinary",
+        "convertAllData": false,
+        "sourceKey": "pdfbase64",
+        "destinationKey": "data4",
+        "options": {
+          "dataIsBase64": true,
+          "mimeType": "application/pdf"
+        }
+      },
+      "id": "d8167d75-aa48-4574-8e42-65f2df26ea42",
+      "name": "Converte PDF1",
+      "type": "n8n-nodes-base.moveBinaryData",
+      "typeVersion": 1,
+      "position": [
+        460,
+        1080
+      ],
+      "alwaysOutputData": true,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "Faça uma síntese do que existe no texto que você acabou de receber, ele veio de um documento PDF. Com base nas informações fornecidas, entenderemos o que o usuário quis compartilhar para podermos dar a ele uma resposta coerente.\nNão faça juízo de valor sobre nenhuma informação, apenas faça uma síntese do que se trata o documento.",
+              "role": "system"
+            },
+            {
+              "content": "={{ $json.text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3e81d5d3-cae0-47ee-a5f3-119635b54e82",
+      "name": "PDF",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.4,
+      "position": [
+        880,
+        1280
+      ]
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "Faça uma síntese do que existe no texto que você acabou de receber, ele veio de um documento PDF. Com base nas informações fornecidas, entenderemos o que o usuário quis compartilhar para podermos dar a ele uma resposta coerente.\nNão faça juízo de valor sobre nenhuma informação, apenas faça uma síntese do que se trata o documento.\nLeve em consideração que junto do documento, o usuário também enviou legenda junto ao PDF, que é: \"{{ $('Webhook').item.json.body.data.message.documentMessage.caption }}\"",
+              "role": "system"
+            },
+            {
+              "content": "={{ $json.text }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "72353ec2-980e-45fa-8fe1-482b90733178",
+      "name": "PDF e Legenda",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.4,
+      "position": [
+        880,
+        1080
+      ],
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "content": "## DESATIVADO POR FALTA DE BASE64",
+        "height": 214.9124348406047,
+        "width": 802.3790740572279,
+        "color": 7
+      },
+      "id": "5709c45c-33e2-47dc-8682-8a4aa66c1eb8",
+      "name": "Sticky Note3",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        420,
+        1040
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "f34fab1d-6f22-4bbb-a368-cc169bc0a292",
+              "leftValue": "={{ $('Webhook').first().json.body.data.message.imageMessage.caption }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "aae73203-beea-4f62-8150-6a98173a8d82",
+      "name": "Imagem com Legenda",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        160,
+        580
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict"
+          },
+          "conditions": [
+            {
+              "id": "ee65dd7f-0edb-4673-ba2a-04aca9f420df",
+              "leftValue": "={{ $('Webhook').first().json.body.data.message.documentWithCaptionMessage.message.documentMessage.caption }}",
+              "rightValue": "",
+              "operator": {
+                "type": "string",
+                "operation": "exists",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "id": "21a32d16-d627-4367-be79-f1dfb43fc141",
+      "name": "Documento com Legenda",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2,
+      "position": [
+        160,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c332a102-7911-44c2-a37e-cdf642685166",
+              "name": "base64",
+              "value": "={{ $('Webhook').first().json.body.data.message.base64 }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "ef3a5d0f-8a99-4204-b417-b62dfce1e598",
+      "name": "Base64",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        0,
+        860
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "c332a102-7911-44c2-a37e-cdf642685166",
+              "name": "base64",
+              "value": "={{ $('Webhook').first().json.body.data.message.base64 }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "b12a9f26-dd1b-49ee-9322-35b62b617e9f",
+      "name": "Set Base64",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        0,
+        1140
+      ]
+    },
+    {
+      "parameters": {
+        "dataType": "string",
+        "value1": "={{ $node[\"Webhook\"].json.body.data.messageType }}",
+        "rules": {
+          "rules": [
+            {
+              "value2": "textMessage",
+              "outputKey": "Texto Mobile"
+            },
+            {
+              "value2": "extendedTextMessage",
+              "outputKey": "Texto Desktop"
+            },
+            {
+              "value2": "conversation",
+              "outputKey": "Texto Respondido"
+            },
+            {
+              "value2": "imageMessage",
+              "outputKey": "Imagem"
+            },
+            {
+              "value2": "audioMessage",
+              "outputKey": "Áudio"
+            },
+            {
+              "value2": "documentMessage",
+              "outputKey": "Documento"
+            },
+            {
+              "value2": "documentWithCaptionMessage",
+              "outputKey": "Documento Respondido"
+            }
+          ]
+        }
+      },
+      "id": "848ceed3-ed05-44da-bdb7-791621662834",
+      "name": "Tipo de Arquivo",
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 2,
+      "position": [
+        -500,
+        880
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "operation": "analyze",
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "text": "=Faça uma síntese da imagem e sua respectiva legenda, direcionando as informações da imagem ao que é coerente com sua legenda, que é: \"{{ $('Webhook').item.json.body.data.message.imageMessage.caption }}\"",
+        "inputType": "base64",
+        "binaryPropertyName": "data3",
+        "options": {}
+      },
+      "id": "943e1507-3ba9-4514-8431-2d311de55af4",
+      "name": "Imagem e Legenda",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.4,
+      "position": [
+        660,
+        460
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "image",
+        "operation": "analyze",
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-4o-mini",
+          "mode": "list",
+          "cachedResultName": "GPT-4O-MINI"
+        },
+        "text": "Faça uma síntese do que existe na imagem. Com base nas informações fornecidas, entenderemos o que o usuário quis passar para podermos dar a ele uma resposta coerente.\nNão faça juízo de valor sobre nenhuma informação, apenas descreva-as.",
+        "inputType": "base64",
+        "binaryPropertyName": "data2",
+        "options": {}
+      },
+      "id": "8f68a299-5302-4105-b49b-1b57584cd7f7",
+      "name": "Imagem",
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.4,
+      "position": [
+        660,
+        660
+      ]
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-12-11T19:57:36.777Z",
+      "updatedAt": "2024-12-11T19:57:36.777Z",
+      "id": "PgZ89dUFuG5Rq72S",
+      "name": "TEMPLATE"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2024-08-26T19:58:24.219Z",
+  "versionId": "caeca524-b28e-4843-94eb-5fcaba3809b7"
+}
