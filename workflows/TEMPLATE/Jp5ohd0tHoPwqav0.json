@@ -1,0 +1,482 @@
+{
+  "active": false,
+  "connections": {
+    "Google Docs": {
+      "main": [
+        [
+          {
+            "node": "Gerar pdf",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "n8n Form Trigger": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "Google Docs",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Cria pasta do cliente": {
+      "main": [
+        [
+          {
+            "node": "copia recibo para a pasta",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "copia recibo para a pasta": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gerar pdf": {
+      "main": [
+        [
+          {
+            "node": "Google Sheets",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "Cria pasta do cliente",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Sheets": {
+      "main": [
+        []
+      ]
+    }
+  },
+  "createdAt": "2024-11-07T18:27:27.839Z",
+  "id": "Jp5ohd0tHoPwqav0",
+  "isArchived": false,
+  "meta": {
+    "templateCredsSetupCompleted": true
+  },
+  "name": "REcibo visto usa assinado copy",
+  "nodes": [
+    {
+      "parameters": {
+        "authentication": "oAuth2",
+        "operation": "download",
+        "fileId": {
+          "__rl": true,
+          "value": "={{ $json.documentId }}",
+          "mode": "id"
+        },
+        "options": {
+          "googleFileConversion": {
+            "conversion": {
+              "docsToFormat": "application/pdf"
+            }
+          }
+        }
+      },
+      "name": "Gerar pdf",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 1,
+      "position": [
+        2280,
+        220
+      ],
+      "id": "1cb780cc-18a2-4a7f-ad3c-b3176f3feede",
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "tPsC1wU0S6BJLtnR",
+          "name": "Google Drive account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "update",
+        "documentURL": "={{ $('copia recibo para a pasta').item.json.id }}",
+        "simple": false,
+        "actionsUi": {
+          "actionFields": [
+            {
+              "action": "replaceAll",
+              "text": "{{nome}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+              "matchCase": "={{ true }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{cpf}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.CPF }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{email}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.email }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{whats}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json.whats }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{qtdade}}",
+              "replaceText": "= {{ $('n8n Form Trigger').item.json['Quantidade ?'] }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{price}}",
+              "replaceText": "={{ \n  $('n8n Form Trigger').item.json['Quantidade ?'] == 1 \n    ? 320 \n    : $('n8n Form Trigger').item.json['Quantidade ?'] == 2 \n      ? 600 \n      : $('n8n Form Trigger').item.json['Quantidade ?'] * 280 \n}}\n"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{data_pe}}",
+              "replaceText": "={{ DateTime.now().setZone('America/Sao_Paulo').setLocale('pt-BR').toFormat('d \\'de\\' LLLL \\'de\\' yyyy') }}\n"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{x_pe}}",
+              "replaceText": "={{ $json.valorPorExtenso }}"
+            },
+            {
+              "action": "replaceAll",
+              "text": "{{addr}}",
+              "replaceText": "={{ $('n8n Form Trigger').item.json['Endereço completo'] }}"
+            }
+          ]
+        }
+      },
+      "id": "249e69ba-4251-4277-bce7-1fb0ce429d0e",
+      "name": "Google Docs",
+      "type": "n8n-nodes-base.googleDocs",
+      "typeVersion": 2,
+      "position": [
+        2040,
+        220
+      ],
+      "credentials": {
+        "googleDocsOAuth2Api": {
+          "id": "cQ7MTspYcgHpbKT3",
+          "name": "Google Docs account"
+        }
+      },
+      "onError": "continueRegularOutput"
+    },
+    {
+      "parameters": {
+        "path": "63d17ed6-2e1a-41ef-8fe9-47a33bfecd43",
+        "formTitle": "Formulário de recibo",
+        "formDescription": "Preencha com os dados do solicitante",
+        "formFields": {
+          "values": [
+            {
+              "fieldLabel": "Nome completo",
+              "placeholder": "William Scarpelli",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "CPF",
+              "placeholder": "254.000.000-69",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "email",
+              "placeholder": "email@email.com",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "whats",
+              "placeholder": "5511988272170",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Quantidade ?",
+              "placeholder": "{{qtdade}}",
+              "requiredField": true
+            },
+            {
+              "fieldLabel": "Endereço completo",
+              "placeholder": "rua 1, nº2 bairro 3",
+              "requiredField": true
+            }
+          ]
+        },
+        "responseMode": "lastNode",
+        "options": {}
+      },
+      "id": "23a95b14-8573-4609-a0b6-adceddd8c794",
+      "name": "n8n Form Trigger",
+      "type": "n8n-nodes-base.formTrigger",
+      "typeVersion": 2.1,
+      "position": [
+        760,
+        220
+      ],
+      "webhookId": "b62034cf-ac41-43b5-bc59-79a78f9f9ed9"
+    },
+    {
+      "parameters": {
+        "jsCode": "function numeroPorExtenso(numero) {\n    const unidades = [\"\", \"um\", \"dois\", \"três\", \"quatro\", \"cinco\", \"seis\", \"sete\", \"oito\", \"nove\"];\n    const especiais = [\"dez\", \"onze\", \"doze\", \"treze\", \"quatorze\", \"quinze\", \"dezesseis\", \"dezessete\", \"dezoito\", \"dezenove\"];\n    const dezenas = [\"\", \"\", \"vinte\", \"trinta\", \"quarenta\", \"cinquenta\", \"sessenta\", \"setenta\", \"oitenta\", \"noventa\"];\n    const centenas = [\"\", \"cento\", \"duzentos\", \"trezentos\", \"quatrocentos\", \"quinhentos\", \"seiscentos\", \"setecentos\", \"oitocentos\", \"novecentos\"];\n\n    if (numero === 0) return \"zero\";\n\n    let extenso = \"\";\n\n    if (numero >= 100) {\n        const centena = Math.floor(numero / 100);\n        extenso += (centena === 1 && numero % 100 === 0) ? \"cem\" : centenas[centena];\n        numero %= 100;\n    }\n\n    if (numero >= 20) {\n        const dezena = Math.floor(numero / 10);\n        extenso += (extenso ? \" e \" : \"\") + dezenas[dezena];\n        numero %= 10;\n    }\n\n    if (numero >= 10) {\n        extenso += (extenso ? \" e \" : \"\") + especiais[numero - 10];\n        return extenso;\n    }\n\n    if (numero > 0) {\n        extenso += (extenso ? \" e \" : \"\") + unidades[numero];\n    }\n\n    return extenso;\n}\n\nfunction valorPorExtenso(valor) {\n    const reais = Math.floor(valor);\n    const centavos = Math.round((valor - reais) * 100);\n\n    let extenso = numeroPorExtenso(reais) + (reais === 1 ? \" real\" : \" reais\");\n\n    if (centavos > 0) {\n        extenso += \" e \" + numeroPorExtenso(centavos) + (centavos === 1 ? \" centavo\" : \" centavos\");\n    }\n\n    return extenso;\n}\n\n// Exemplo de uso\nconst valor = $('Edit Fields').item.json.preco ; // Insira o valor que deseja converter\nconst x_pe = valorPorExtenso(valor);\nreturn { valorPorExtenso: x_pe };\n"
+      },
+      "id": "7a079aa5-5e66-47f9-b556-0fba6aecbc59",
+      "name": "Code",
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        1840,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "resource": "folder",
+        "name": "=#  teste - {{ $json['Nome completo'] }} - {{ $json.whats }}",
+        "driveId": {
+          "__rl": true,
+          "value": "My Drive",
+          "mode": "list",
+          "cachedResultName": "My Drive",
+          "cachedResultUrl": "https://drive.google.com/drive/my-drive"
+        },
+        "folderId": {
+          "__rl": true,
+          "value": "19g5Q6qlds6CU77kXI3Tv7V3tSMmmIshN",
+          "mode": "list",
+          "cachedResultName": "teste",
+          "cachedResultUrl": "https://drive.google.com/drive/folders/19g5Q6qlds6CU77kXI3Tv7V3tSMmmIshN"
+        },
+        "options": {}
+      },
+      "id": "b5c0e29a-5eed-4d1f-984b-845194903c14",
+      "name": "Cria pasta do cliente",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1220,
+        200
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "copy",
+        "fileId": {
+          "__rl": true,
+          "value": "19g5Q6qlds6CU77kXI3Tv7V3tSMmmIshN",
+          "mode": "id"
+        },
+        "name": "=recibo {{ $('n8n Form Trigger').item.json['Nome completo'] }}",
+        "options": {}
+      },
+      "id": "65141c67-ec30-4c18-a0e8-274c73dadc6c",
+      "name": "copia recibo para a pasta",
+      "type": "n8n-nodes-base.googleDrive",
+      "typeVersion": 3,
+      "position": [
+        1440,
+        220
+      ],
+      "credentials": {
+        "googleDriveOAuth2Api": {
+          "id": "IQq1kbUxDRd9wsUN",
+          "name": "Google Drive account Wil"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "dba176e7-285b-4302-93d1-81f115765c94",
+              "name": "=preco",
+              "value": "={{    $('n8n Form Trigger').item.json['Quantidade ?'] == 1      ? 320      : $('n8n Form Trigger').item.json['Quantidade ?'] == 2        ? 600        : $('n8n Form Trigger').item.json['Quantidade ?'] * 280  }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "id": "3d94eead-743b-4300-bc6d-c24a816cb253",
+      "name": "Edit Fields",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1620,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "8f367dba-582b-44ab-9c88-f0f7413f6605",
+              "leftValue": "={{ $json['Nome completo'] }}",
+              "rightValue": "^[A-ZÀ-Ý][a-zà-ÿ]+(?: [A-ZÀ-Ý][a-zà-ÿ]+)+$",
+              "operator": {
+                "type": "string",
+                "operation": "notEmpty",
+                "singleValue": true
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "id": "e8d5aa4c-b82c-48e8-bcac-6c03840b5d04",
+      "name": "If",
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        980,
+        220
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "8b9db6d0-2113-48df-860d-1b9f7ab2d2d8",
+      "name": "No Operation, do nothing1",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        560
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "appendOrUpdate",
+        "documentId": {
+          "__rl": true,
+          "value": "19jpaGpz7skwwNpn_GFKD8FI78RvANw1B",
+          "mode": "id"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "https://docs.google.com/spreadsheets/d/19jpaGpz7skwwNpn_GFKD8FI78RvANw1B/edit?gid=1693959390#gid=1693959390",
+          "mode": "url"
+        },
+        "columns": {
+          "mappingMode": "autoMapInputData",
+          "value": {},
+          "matchingColumns": [],
+          "schema": []
+        },
+        "options": {
+          "cellFormat": "RAW",
+          "handlingExtraData": "insertInNewColumn"
+        }
+      },
+      "type": "n8n-nodes-base.googleSheets",
+      "typeVersion": 4.5,
+      "position": [
+        2480,
+        240
+      ],
+      "id": "b53c1055-5687-4c02-afd2-065d0634c4e7",
+      "name": "Google Sheets",
+      "credentials": {
+        "googleSheetsOAuth2Api": {
+          "id": "fzfV64LpzABP19xE",
+          "name": "Google Sheets account"
+        }
+      }
+    }
+  ],
+  "pinData": {
+    "n8n Form Trigger": [
+      {
+        "json": {
+          "Nome completo": "william scarpelli",
+          "CPF": "254.936.328-02",
+          "email": "wil@wil.com",
+          "whats": "11994568896",
+          "Quantidade ?": "2",
+          "Endereço completo": "Alameda Rio Negro, 1033",
+          "submittedAt": "2024-10-18T16:28:41.498-03:00",
+          "formMode": "test"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2024-12-11T19:57:36.777Z",
+      "updatedAt": "2024-12-11T19:57:36.777Z",
+      "id": "PgZ89dUFuG5Rq72S",
+      "name": "TEMPLATE"
+    }
+  ],
+  "triggerCount": 2,
+  "updatedAt": "2024-11-08T22:17:01.287Z",
+  "versionId": "de953efc-c138-4e76-8452-80937a29b77c"
+}
