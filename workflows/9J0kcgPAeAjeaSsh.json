@@ -1,0 +1,960 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "direction",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [
+          {
+            "node": "serialize",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        []
+      ]
+    },
+    "remover": {
+      "main": [
+        [
+          {
+            "node": "keyword",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Execute Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get messages buffer": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "get messages buffer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "delete buffer",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "direction": {
+      "main": [
+        [
+          {
+            "node": "remover",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "serialize": {
+      "main": [
+        [
+          {
+            "node": "push message buffer",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow": {
+      "main": [
+        [
+          {
+            "node": "serialize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "seletor de agente": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Execute Workflow1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "keyword": {
+      "main": [
+        [
+          {
+            "node": "seletor de agente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-21T14:01:12.941Z",
+  "id": "9J0kcgPAeAjeaSsh",
+  "isArchived": false,
+  "meta": null,
+  "name": "debounce",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "chatwoot",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -2580,
+        520
+      ],
+      "id": "129727b3-66d5-4652-9c5b-4fdeb508cf3b",
+      "name": "Webhook",
+      "webhookId": "a632c49a-d99d-4723-b299-225fd6554391"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4acaa41e-bb6d-4428-a10c-21e3193d3e5b",
+              "name": "remoteJID",
+              "value": "={{ $json.body.conversation.meta.sender.identifier }}",
+              "type": "string"
+            },
+            {
+              "id": "08e2eacd-7545-4d18-b44c-130e962f2537",
+              "name": "name",
+              "value": "={{ $json.body.conversation.meta.sender.name }}",
+              "type": "string"
+            },
+            {
+              "id": "d5527206-7ac3-4cc3-aff7-e29b87c0674a",
+              "name": "agentID",
+              "value": "={{ $json.body.conversation.meta.assignee.id }}",
+              "type": "number"
+            },
+            {
+              "id": "7d9f9d2b-e10b-4622-a058-8336a43a85aa",
+              "name": "inboxID",
+              "value": "={{ $json.body.inbox.id }}",
+              "type": "number"
+            },
+            {
+              "id": "cd0b6c81-c401-4c51-be45-f10c671da537",
+              "name": "conversationID",
+              "value": "={{ $json.body.conversation.id }}",
+              "type": "number"
+            },
+            {
+              "id": "8ff0dd5c-cd22-4f22-b472-e89793a1281c",
+              "name": "direction",
+              "value": "={{ $json.body.message_type }}",
+              "type": "string"
+            },
+            {
+              "id": "055004bd-df89-4aed-96d8-164db8679ce5",
+              "name": "media",
+              "value": "={{ $json.body.attachments[0].file_type }}",
+              "type": "string"
+            },
+            {
+              "id": "d6fa4fae-fd28-403a-b513-08d4c8bae0f9",
+              "name": "TEXTO",
+              "value": "={{ $json.body.conversation.messages[0].content_type }}",
+              "type": "string"
+            },
+            {
+              "id": "4f428bc3-a3d0-48ec-81d7-abe11f2eb801",
+              "name": "data_url",
+              "value": "={{ $json.body.conversation.messages[0].attachments[0].data_url }}",
+              "type": "string"
+            },
+            {
+              "id": "49c625d0-1550-4a7d-aa3b-f2b2f596236e",
+              "name": "body.conversation.messages[0].attachments[0].file_type",
+              "value": "={{ $json.body.conversation.messages[0].attachments[0].file_type }}",
+              "type": "string"
+            },
+            {
+              "id": "3218d555-5521-41f5-8ba8-a5393f72dd19",
+              "name": "content",
+              "value": "={{ $json.body.content }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -2380,
+        520
+      ],
+      "id": "5a0429c8-b69e-4531-82e1-1a797ae0b3cc",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "2cf910d1-f033-49f3-ac8a-9a968c02b0e4",
+                    "leftValue": "={{ $json.media }}",
+                    "rightValue": "=audio ",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "audio"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "3e328914-d57d-499f-811b-dc6a2f0456c4",
+                    "leftValue": "={{ $json.media }}",
+                    "rightValue": "image",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "image"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "435bf163-21d5-41aa-bca5-31996ce641e4",
+                    "leftValue": "={{ $('Edit Fields').item.json.TEXTO }}",
+                    "rightValue": "text",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "texto"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "d2de153b-a60f-4bed-895a-9eb3cb796f3b",
+                    "leftValue": "document",
+                    "rightValue": "document",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "document"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "74537e0a-336f-4aa2-9b5d-f5bb634d510a",
+                    "leftValue": "={{ $json.data_url }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -1240,
+        280
+      ],
+      "id": "a2cabe8c-fc9d-4a86-bcd2-40a7a224f6c0",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "7a969225-df7a-4fff-8f37-87a0a3b72af6",
+              "leftValue": "={{ $json.remoteJID }}",
+              "rightValue": "5511994568896@s.whatsapp.net",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1960,
+        460
+      ],
+      "id": "d5ec5174-8119-492f-9cbf-5feddfca3059",
+      "name": "remover"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Webhook').item.json.body.conversation.messages[0].attachments[0].data_url }}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -980,
+        180
+      ],
+      "id": "7416e425-7ef9-4b07-b363-f688ca035cda",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "operation": "binaryToPropery",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        -800,
+        120
+      ],
+      "id": "32dee60f-ffa7-46e5-86da-558ff1263b11",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "propertyName": "messages",
+        "key": "={{ $('Edit Fields').item.json.remoteJID }}",
+        "keyType": "list",
+        "options": {}
+      },
+      "id": "53fe1c06-3c95-4483-8dd5-099c2afd27d7",
+      "name": "get messages buffer",
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        300,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "push",
+        "list": "={{ $('Edit Fields').item.json.remoteJID }}",
+        "messageData": "={{ $json.body.content }}",
+        "tail": true
+      },
+      "id": "a31416d8-cf45-40c0-81d4-dd7441efffcc",
+      "name": "push message buffer",
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        20,
+        320
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "5f3ae6f7-37ad-4069-baf5-7ac59075336e",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        60,
+        500
+      ],
+      "webhookId": "e95b937c-1600-4258-bf09-82785120e6da"
+    },
+    {
+      "parameters": {},
+      "id": "b5addfa7-5112-4442-844f-3795a2aa0990",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        800,
+        640
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "key": "={{ $('Edit Fields').item.json.remoteJID }}"
+      },
+      "id": "bda78394-b342-431b-a08b-a45f25c31b44",
+      "name": "delete buffer",
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        800,
+        480
+      ]
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "372959bb-ef98-4d8c-8cd4-abfeb9dec56f",
+              "leftValue": "={{ $json.messages.last() }}",
+              "rightValue": "={{ $('Wait').item.json.body.content }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": false
+        }
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        540,
+        500
+      ],
+      "id": "514cdbac-c4d3-49bd-803d-d0c578369094",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "9a7b9883-3f92-4cd6-9bc8-7cea0f5582be",
+              "leftValue": "={{ $json.direction }}",
+              "rightValue": "incoming",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -2200,
+        480
+      ],
+      "id": "834179fa-f62f-4bdf-a4c8-4e83eb17b09e",
+      "name": "direction"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7066c886-a81c-4b6f-9ec9-adb82640d2be",
+              "name": "remoteJID",
+              "value": "={{ $('Edit Fields').item.json.remoteJID }}",
+              "type": "string"
+            },
+            {
+              "id": "ef51d1b0-fff4-4341-b5e1-bce6cfc34243",
+              "name": "body.content",
+              "value": "={{ ($json.content || \"\") + ($json.text || \"\") }}\n",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -280,
+        500
+      ],
+      "id": "aa0054ab-9ca9-42a0-a3c9-5fe194634ffe",
+      "name": "serialize"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "w8avbrs50lHFROyb",
+          "mode": "id"
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.1,
+      "position": [
+        -520,
+        340
+      ],
+      "id": "fd6871c2-4355-45e5-8b08-23e4983d2ae1",
+      "name": "Execute Workflow"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d8ef0153-0950-466b-b0e2-1658f53433d5",
+              "leftValue": "={{ $json.agentID }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "empty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "e8afc406-c27b-4d40-b4b4-f8259dcbdb4c",
+              "leftValue": "{{ $json.agentID }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1500,
+        380
+      ],
+      "id": "e736ed24-6629-4a3d-8e87-f84e87a29b7b",
+      "name": "seletor de agente"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "3305967f-3485-4d17-bb35-92bb72974a3d",
+              "leftValue": "={{ $json.content }}",
+              "rightValue": "Reset",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1720,
+        400
+      ],
+      "id": "26225ab4-8704-4cf9-acbf-eeab5a313f1a",
+      "name": "keyword"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.1,
+      "position": [
+        -1280,
+        540
+      ],
+      "id": "c2663439-df51-4cae-8701-f4378a9505a4",
+      "name": "Execute Workflow1",
+      "disabled": true
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "hook.megabuy.com.br",
+            "user-agent": "rest-client/2.1.0 (linux-musl x86_64) ruby/3.3.3p89",
+            "content-length": "4426",
+            "accept": "application/json",
+            "accept-encoding": "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
+            "content-type": "application/json",
+            "x-forwarded-for": "172.18.0.1",
+            "x-forwarded-host": "hook.megabuy.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "cfe8b78f1d6a",
+            "x-real-ip": "172.18.0.1"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "account": {
+              "id": 1,
+              "name": "Megabuy Vistos"
+            },
+            "additional_attributes": {},
+            "content_attributes": {
+              "external_created_at": 1736889619,
+              "items": {
+                "quepasa": {
+                  "msgid": "010E63FBE9FA1FB340F8680921744BDB"
+                }
+              }
+            },
+            "content_type": "text",
+            "content": "Boa  tarde",
+            "conversation": {
+              "additional_attributes": {
+                "mail_subject": ""
+              },
+              "can_reply": true,
+              "channel": "Channel::Api",
+              "contact_inbox": {
+                "id": 50,
+                "contact_id": 3,
+                "inbox_id": 3,
+                "source_id": "2e9dfd5d-2733-4efd-b491-30d81c09c475",
+                "created_at": "2024-12-12T22:50:55.928Z",
+                "updated_at": "2024-12-12T22:50:55.928Z",
+                "hmac_verified": false,
+                "pubsub_token": "tHSsaviwuDR53PcEBKDZyvKj"
+              },
+              "id": 60,
+              "inbox_id": 3,
+              "messages": [
+                {
+                  "id": 13207,
+                  "content": "Boa  tarde",
+                  "account_id": 1,
+                  "inbox_id": 3,
+                  "conversation_id": 60,
+                  "message_type": 0,
+                  "created_at": 1736889621,
+                  "updated_at": "2025-01-14T21:20:21.680Z",
+                  "private": false,
+                  "status": "sent",
+                  "source_id": "010E63FBE9FA1FB340F8680921744BDB",
+                  "content_type": "text",
+                  "content_attributes": {
+                    "external_created_at": 1736889619,
+                    "items": {
+                      "quepasa": {
+                        "msgid": "010E63FBE9FA1FB340F8680921744BDB"
+                      }
+                    }
+                  },
+                  "sender_type": "Contact",
+                  "sender_id": 3,
+                  "external_source_ids": {},
+                  "additional_attributes": {},
+                  "processed_message_content": "Boa  tarde",
+                  "sentiment": {},
+                  "conversation": {
+                    "assignee_id": null,
+                    "unread_count": 5,
+                    "last_activity_at": 1736889621,
+                    "contact_inbox": {
+                      "source_id": "2e9dfd5d-2733-4efd-b491-30d81c09c475"
+                    }
+                  },
+                  "sender": {
+                    "additional_attributes": {},
+                    "custom_attributes": {
+                      "skipagenttitle": false
+                    },
+                    "email": null,
+                    "id": 3,
+                    "identifier": "5511994568896@s.whatsapp.net",
+                    "name": "William Scarpelli",
+                    "phone_number": "+5511994568896",
+                    "thumbnail": "https://chat.megabuy.com.br/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff44425be8a5e5c20067d644be3376dd936779f7/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWZvdyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--297f76505667dc46aed5b2693e6100ff8d170b50/345671252_243790198306682_6615187217476341009_n.jpg",
+                    "type": "contact"
+                  }
+                }
+              ],
+              "labels": [],
+              "meta": {
+                "sender": {
+                  "additional_attributes": {},
+                  "custom_attributes": {
+                    "skipagenttitle": false
+                  },
+                  "email": null,
+                  "id": 3,
+                  "identifier": "5511994568896@s.whatsapp.net",
+                  "name": "William Scarpelli",
+                  "phone_number": "+5511994568896",
+                  "thumbnail": "https://chat.megabuy.com.br/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff44425be8a5e5c20067d644be3376dd936779f7/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWZvdyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--297f76505667dc46aed5b2693e6100ff8d170b50/345671252_243790198306682_6615187217476341009_n.jpg",
+                  "type": "contact"
+                },
+                "assignee": null,
+                "team": null,
+                "hmac_verified": false
+              },
+              "status": "open",
+              "custom_attributes": {},
+              "snoozed_until": null,
+              "unread_count": 5,
+              "first_reply_created_at": "2024-12-12T22:50:56.518Z",
+              "priority": null,
+              "waiting_since": 1736889470,
+              "agent_last_seen_at": 1736887974,
+              "contact_last_seen_at": 0,
+              "last_activity_at": 1736889621,
+              "timestamp": 1736889621,
+              "created_at": 1734043856
+            },
+            "created_at": "2025-01-14T21:20:21.680Z",
+            "id": 13207,
+            "inbox": {
+              "id": 3,
+              "name": "Megabuy"
+            },
+            "message_type": "incoming",
+            "status": "sent",
+            "private": false,
+            "sender": {
+              "account": {
+                "id": 1,
+                "name": "Megabuy Vistos"
+              },
+              "additional_attributes": {},
+              "avatar": "https://chat.megabuy.com.br/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff44425be8a5e5c20067d644be3376dd936779f7/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWZvdyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--297f76505667dc46aed5b2693e6100ff8d170b50/345671252_243790198306682_6615187217476341009_n.jpg",
+              "custom_attributes": {
+                "skipagenttitle": false
+              },
+              "email": null,
+              "id": 3,
+              "identifier": "5511994568896@s.whatsapp.net",
+              "name": "William Scarpelli",
+              "phone_number": "+5511994568896",
+              "thumbnail": "https://chat.megabuy.com.br/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff44425be8a5e5c20067d644be3376dd936779f7/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWZvdyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--297f76505667dc46aed5b2693e6100ff8d170b50/345671252_243790198306682_6615187217476341009_n.jpg"
+            },
+            "source_id": "010E63FBE9FA1FB340F8680921744BDB",
+            "event": "message_created"
+          },
+          "webhookUrl": "https://hook.megabuy.com.br/webhook/chatwoot",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-21T14:01:12.941Z",
+  "versionId": "f6dda610-e168-40c7-9f3b-1962f8729747"
+}
