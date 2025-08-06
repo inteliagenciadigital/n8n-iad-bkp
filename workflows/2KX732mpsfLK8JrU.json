@@ -1,0 +1,357 @@
+{
+  "active": false,
+  "connections": {
+    "When chat message received": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenAI Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "sheets": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Gmail": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-24T22:01:27.124Z",
+  "id": "2KX732mpsfLK8JrU",
+  "isArchived": false,
+  "meta": null,
+  "name": "Email",
+  "nodes": [
+    {
+      "parameters": {
+        "content": "# Informações",
+        "height": 80,
+        "width": 243,
+        "color": 7
+      },
+      "id": "a7c9a41c-85dd-442e-9f2c-c7866a2b47cd",
+      "name": "Sticky Note8",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -380,
+        20
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## N8N Versão 1.71.1",
+        "height": 80,
+        "width": 283,
+        "color": 7
+      },
+      "id": "22ca9ce4-00b3-4026-af6d-cf68c0134061",
+      "name": "Sticky Note9",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -380,
+        120
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## [Grupo de Networking](https://chat.whatsapp.com/EvigcSnVVim11D56QPSjPX)",
+        "height": 80,
+        "width": 323,
+        "color": 7
+      },
+      "id": "d43c6b12-c720-4dc2-a4b1-7b769828ccf4",
+      "name": "Sticky Note11",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -380,
+        220
+      ]
+    },
+    {
+      "parameters": {
+        "content": "## [Acesse o canal no Youtube](https://www.youtube.com/@N8NLabz)",
+        "height": 80,
+        "width": 343,
+        "color": 7
+      },
+      "id": "f0f3854a-a6b2-4dfb-8bd2-a5ee3459356e",
+      "name": "Sticky Note13",
+      "type": "n8n-nodes-base.stickyNote",
+      "typeVersion": 1,
+      "position": [
+        -380,
+        320
+      ]
+    },
+    {
+      "parameters": {
+        "content": "![N8N Labz](https://i.postimg.cc/nzFz2Bzd/N8N-Labz.png)",
+        "height": 437,
+        "width": 736,
+        "color": 3
+      },
+      "id": "bfc495c9-f841-4d6c-807f-6404395cd51a",
+      "name": "Sticky Note14",
+      "type": "n8n-nodes-base.stickyNote",
+      "position": [
+        0,
+        0
+      ],
+      "typeVersion": 1
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.chatTrigger",
+      "typeVersion": 1.1,
+      "position": [
+        -1060,
+        60
+      ],
+      "id": "0033136e-954a-469e-947e-5655a7f7720a",
+      "name": "When chat message received",
+      "webhookId": "17b959a3-8afd-466f-bcbb-e64f14825ca3"
+    },
+    {
+      "parameters": {
+        "options": {
+          "systemMessage": "=<persona>\n    <description>Assistente pessoal automatizado</description>\n    <objective>\n        Enviar e-mails informais e personalizados, baseando-se na tabela do Supabase, garantindo a aprovação do usuário antes do envio. Após o envio, registrar o e-mail enviado em uma planilha do Google Sheets. Responder de forma direta e concisa.\n    </objective>\n</persona>\n\n<instructions>\n    <conversation>\n        <description>Responder de forma amigável e direta em conversas normais.</description>\n        <example>\n            <user>Olá!</user>\n            <assistant>Oi! Como posso te ajudar?</assistant>\n        </example>\n    </conversation>\n    <email_task>\n        <description>\n            Quando o usuário solicitar explicitamente o envio de um e-mail, o assistente deve:\n        </description>\n        <steps>\n            <step>\n                <number>1</number>\n                <description>Identificar a intenção do usuário com base em palavras-chave como \"envie e-mail\", \"meu irmão\", etc.</description>\n            </step>\n            <step>\n                <number>2</number>\n                <description>Buscar os dados necessários na tabela do Supabase (campos: nome, apelido e e-mail).</description>\n            </step>\n            <step>\n                <number>3</number>\n                <description>Gerar o conteúdo do e-mail com um tom informal e direto.</description>\n                <example>\n                    <email>\n                        <to>{{EMAIL}}</to>\n                        <subject>Oi!</subject>\n                        <body>Fala, {{NOME}}! Tudo certo? Só tô passando pra saber como você tá. Me avisa qualquer coisa!</body>\n                    </email>\n                </example>\n            </step>\n            <step>\n                <number>4</number>\n                <description>Enviar ao usuário uma prévia do e-mail gerado para aprovação.</description>\n                <example>\n                    <preview>\n                        <to>{{EMAIL}}</to>\n                        <subject>Oi!</subject>\n                        <body>Fala, {{NOME}}! Tudo certo? Só tô passando pra saber como você tá. Me avisa qualquer coisa!</body>\n                    </preview>\n                    <approval_request>Quer enviar esse e-mail?</approval_request>\n                </example>\n            </step>\n            <step>\n                <number>5</number>\n                <description>Enviar o e-mail somente após a aprovação do usuário.</description>\n            </step>\n            <step>\n                <number>6</number>\n                <description>Registrar os dados do e-mail enviado em uma planilha do Google Sheets.</description>\n                <example>\n                    <google_sheets_entry>\n                        <row>\n                            <field name=\"Destinatário\">{{EMAIL}}</field>\n                            <field name=\"Nome\">{{NOME}}</field>\n                            <field name=\"Apelido\">{{APELIDO}}</field>\n                            <field name=\"Assunto\">Oi!</field>\n                            <field name=\"Corpo do E-mail\">Fala, {{NOME}}! Tudo certo? Só tô passando pra saber como você tá. Me avisa qualquer coisa!</field>\n                            <field name=\"Data de Envio\">{{DATA_ENVIO}}</field>\n                        </row>\n                    </google_sheets_entry>\n                </example>\n            </step>\n            <step>\n                <number>7</number>\n                <description>Informar o usuário de forma direta que o e-mail foi enviado e registrado na planilha.</description>\n                <example>\n                    <confirmation>E-mail enviado para {{EMAIL}} e registrado na planilha.</confirmation>\n                </example>\n            </step>\n        </steps>\n    </email_task>\n</instructions>\n\n<restrictions>\n    <restriction>Não enviar e-mails sem aprovação do usuário.</restriction>\n    <restriction>Registrar todos os e-mails enviados na planilha do Google Sheets após o envio.</restriction>\n    <restriction>Responder de forma concisa, sem explicar ações tomadas.</restriction>\n</restrictions>\n\n<important_points>\n    <point>Respostas devem ser diretas e claras, sem explicações desnecessárias.</point>\n    <point>O e-mail deve ter um tom informal, de acordo com o contexto solicitado.</point>\n    <point>Registrar todos os e-mails enviados na planilha do Google Sheets, incluindo informações como destinatário, assunto e data de envio.</point>\n</important_points>\n"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        -840,
+        60
+      ],
+      "id": "2de1b78f-9e4e-4030-bb66-7104ff98685b",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenAi",
+      "typeVersion": 1,
+      "position": [
+        -1040,
+        280
+      ],
+      "id": "b5933814-101f-4a84-a05f-4a506ce0ef12",
+      "name": "OpenAI Chat Model"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatAnthropic",
+      "typeVersion": 1.2,
+      "position": [
+        -1200,
+        280
+      ],
+      "id": "a87f5691-5a94-4188-af52-81d266368065",
+      "name": "Anthropic Chat Model"
+    },
+    {
+      "parameters": {
+        "operation": "executeQuery",
+        "query": "DELETE FROM n8n_chat_histories;",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.postgres",
+      "typeVersion": 2.5,
+      "position": [
+        -1280,
+        60
+      ],
+      "id": "e3f4d9b8-0da8-4e2a-adfb-7f1ce68005e1",
+      "name": "Postgres"
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Chame essa tool para buscar os e-mails pelo nome ou apelido. ",
+        "operation": "getAll",
+        "tableId": "emails",
+        "returnAll": true
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        -780,
+        280
+      ],
+      "id": "3450830d-2c8a-42ee-81c3-b77de8a68eea",
+      "name": "Supabase"
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Chame essa tool para enviar e-mails",
+        "sendTo": "={{  $fromAI(\"email\") }}",
+        "subject": "={{ $fromAI(\"Titulo\",\"coloque aqui o titulo do email.\") }}",
+        "emailType": "text",
+        "message": "={{ $fromAI(\"texto\",\"coloque e-mail a ser enviado\") }}",
+        "options": {
+          "appendAttribution": false
+        }
+      },
+      "type": "n8n-nodes-base.gmailTool",
+      "typeVersion": 2.1,
+      "position": [
+        -640,
+        320
+      ],
+      "id": "d35720aa-84bb-40d6-b89f-c46712c26dca",
+      "name": "Gmail",
+      "webhookId": "0f501431-3eb4-47d2-97bc-f02575e7c932"
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "toolDescription": "Use essa tool para gravar o envio de e-mail após a confirmação.",
+        "operation": "append",
+        "documentId": {
+          "__rl": true,
+          "value": "142yZBYsqnwkAQSXRZhg9s-H0gHwxAugtJVna1LpEGvM",
+          "mode": "list",
+          "cachedResultName": "Emails",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/142yZBYsqnwkAQSXRZhg9s-H0gHwxAugtJVna1LpEGvM/edit?usp=drivesdk"
+        },
+        "sheetName": {
+          "__rl": true,
+          "value": "gid=0",
+          "mode": "list",
+          "cachedResultName": "Sheet1",
+          "cachedResultUrl": "https://docs.google.com/spreadsheets/d/142yZBYsqnwkAQSXRZhg9s-H0gHwxAugtJVna1LpEGvM/edit#gid=0"
+        },
+        "columns": {
+          "mappingMode": "defineBelow",
+          "value": {
+            "Data": "={{ $now.format('dd/MM/yyyy') }}",
+            "Destinatário ": "={{ $fromAI(\"email\") }}",
+            "Mensagem": "={{ $fromAI(\"texto\",\"coloque e-mail a ser enviado\") }}"
+          },
+          "matchingColumns": [],
+          "schema": [
+            {
+              "id": "Data",
+              "displayName": "Data",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Destinatário ",
+              "displayName": "Destinatário ",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            },
+            {
+              "id": "Mensagem",
+              "displayName": "Mensagem",
+              "required": false,
+              "defaultMatch": false,
+              "display": true,
+              "type": "string",
+              "canBeUsedToMatch": true
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.googleSheetsTool",
+      "typeVersion": 4.5,
+      "position": [
+        -500,
+        320
+      ],
+      "id": "f50bf9c9-b169-4c31-b8cc-04c49203159c",
+      "name": "sheets"
+    },
+    {
+      "parameters": {
+        "contextWindowLength": 10
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.3,
+      "position": [
+        -900,
+        280
+      ],
+      "id": "a572f029-a3aa-45dd-8c8d-9b8983f56f23",
+      "name": "Postgres Chat Memory"
+    }
+  ],
+  "pinData": {},
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-24T22:01:27.124Z",
+  "versionId": "9c9b503a-0113-4814-88cd-8d4f66c31d9a"
+}
