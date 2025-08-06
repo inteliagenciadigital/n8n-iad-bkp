@@ -1,0 +1,1883 @@
+{
+  "active": false,
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Separa vars",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "remover": {
+      "main": [
+        [
+          {
+            "node": "keyword",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Switch": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [],
+        [
+          {
+            "node": "serialize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "main": [
+        [
+          {
+            "node": "Extract from File",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Extract from File": {
+      "main": [
+        [
+          {
+            "node": "Execute Workflow",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "get messages buffer": {
+      "main": [
+        [
+          {
+            "node": "If",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Wait": {
+      "main": [
+        [
+          {
+            "node": "get messages buffer",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "delete buffer": {
+      "main": [
+        [
+          {
+            "node": "messages",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "messages": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "If": {
+      "main": [
+        [
+          {
+            "node": "delete buffer",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "No Operation, do nothing",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "direction": {
+      "main": [
+        [
+          {
+            "node": "remover",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "serialize": {
+      "main": [
+        [
+          {
+            "node": "push message buffer",
+            "type": "main",
+            "index": 0
+          },
+          {
+            "node": "Wait",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory": {
+      "ai_memory": [
+        [
+          {
+            "node": "apagar memoria",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Execute Workflow": {
+      "main": [
+        [
+          {
+            "node": "serialize",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "seletor de agente": {
+      "main": [
+        [
+          {
+            "node": "Switch",
+            "type": "main",
+            "index": 0
+          }
+        ],
+        [
+          {
+            "node": "Execute Workflow1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "keyword": {
+      "main": [
+        [
+          {
+            "node": "seletor de agente",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Separa vars": {
+      "main": [
+        [
+          {
+            "node": "direction",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "Mensagem",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Calculator": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Postgres Chat Memory1": {
+      "ai_memory": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_memory",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Supabase": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "DB",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model3": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "DB",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Cohere": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store1": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "CAN",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model4": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "CAN",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Cohere1": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store1",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store2": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "DB2",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model5": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "DB2",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Cohere2": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store2",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store3": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "DB3",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model6": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "DB3",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Cohere3": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store3",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store4": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "DB4",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model7": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "DB4",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Cohere4": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store4",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Pinecone Vector Store5": {
+      "ai_vectorStore": [
+        [
+          {
+            "node": "USA",
+            "type": "ai_vectorStore",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Google Gemini Chat Model8": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "USA",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Embeddings Cohere5": {
+      "ai_embedding": [
+        [
+          {
+            "node": "Pinecone Vector Store5",
+            "type": "ai_embedding",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DB": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DB4": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DB3": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "DB2": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "USA": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "CAN": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "createdAt": "2025-01-24T15:42:31.043Z",
+  "id": "GiT1Nxuw3U38Q2Gf",
+  "isArchived": false,
+  "meta": null,
+  "name": "SDR",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "chatwoot",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -1880,
+        380
+      ],
+      "id": "c6cd9dd1-e446-45ab-b2b3-000004f3b612",
+      "name": "Webhook",
+      "webhookId": "29ae0147-1bb6-470c-bc9a-3ea5ebe00925"
+    },
+    {
+      "parameters": {
+        "rules": {
+          "values": [
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "2cf910d1-f033-49f3-ac8a-9a968c02b0e4",
+                    "leftValue": "={{ $json.media }}",
+                    "rightValue": "=audio ",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "audio"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "3e328914-d57d-499f-811b-dc6a2f0456c4",
+                    "leftValue": "={{ $json.media }}",
+                    "rightValue": "image",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "image"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "435bf163-21d5-41aa-bca5-31996ce641e4",
+                    "leftValue": "={{ $('Separa vars').item.json.TEXTO }}",
+                    "rightValue": "text",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "texto"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "d2de153b-a60f-4bed-895a-9eb3cb796f3b",
+                    "leftValue": "document",
+                    "rightValue": "document",
+                    "operator": {
+                      "type": "string",
+                      "operation": "equals",
+                      "name": "filter.operator.equals"
+                    }
+                  }
+                ],
+                "combinator": "and"
+              },
+              "renameOutput": true,
+              "outputKey": "document"
+            },
+            {
+              "conditions": {
+                "options": {
+                  "caseSensitive": true,
+                  "leftValue": "",
+                  "typeValidation": "loose",
+                  "version": 2
+                },
+                "conditions": [
+                  {
+                    "id": "74537e0a-336f-4aa2-9b5d-f5bb634d510a",
+                    "leftValue": "={{ $json.data_url }}",
+                    "rightValue": "",
+                    "operator": {
+                      "type": "string",
+                      "operation": "exists",
+                      "singleValue": true
+                    }
+                  }
+                ],
+                "combinator": "and"
+              }
+            }
+          ]
+        },
+        "looseTypeValidation": true,
+        "options": {}
+      },
+      "type": "n8n-nodes-base.switch",
+      "typeVersion": 3.2,
+      "position": [
+        -540,
+        140
+      ],
+      "id": "92ca1cb9-9eee-4031-9cc2-a1dd1c205570",
+      "name": "Switch"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "7a969225-df7a-4fff-8f37-87a0a3b72af6",
+              "leftValue": "={{ $json.remoteJID }}",
+              "rightValue": "5511994568896@s.whatsapp.net",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1260,
+        320
+      ],
+      "id": "caa7dec9-5b66-4a5c-89f3-2551e1ce484b",
+      "name": "remover"
+    },
+    {
+      "parameters": {
+        "url": "={{ $('Webhook').item.json.body.conversation.messages[0].attachments[0].data_url }}",
+        "options": {
+          "timeout": 10000
+        }
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        -280,
+        40
+      ],
+      "id": "03656e4a-7c14-4d97-b2ee-a22c592398fa",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "operation": "binaryToPropery",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.extractFromFile",
+      "typeVersion": 1,
+      "position": [
+        -100,
+        -20
+      ],
+      "id": "59cee9a0-bcde-4e16-b7f2-fc1bee15020e",
+      "name": "Extract from File"
+    },
+    {
+      "parameters": {
+        "operation": "get",
+        "propertyName": "messages",
+        "key": "={{ $('Separa vars').item.json.remoteJID }}",
+        "keyType": "list",
+        "options": {}
+      },
+      "id": "3be722ec-ffc1-4c06-b2e8-673b2d2ca4fb",
+      "name": "get messages buffer",
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        1000,
+        360
+      ],
+      "credentials": {
+        "redis": {
+          "id": "MKNLoiwtabZzc4Hr",
+          "name": "Redis account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "operation": "push",
+        "list": "={{ $('Separa vars').item.json.remoteJID }}",
+        "messageData": "={{ $json.body.content }}",
+        "tail": true
+      },
+      "id": "25eb996e-e476-4e41-97fd-8b847a20dbd6",
+      "name": "push message buffer",
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        760,
+        180
+      ]
+    },
+    {
+      "parameters": {},
+      "id": "8a8c2840-01fc-474a-92ac-43fb656a34cc",
+      "name": "Wait",
+      "type": "n8n-nodes-base.wait",
+      "typeVersion": 1.1,
+      "position": [
+        760,
+        360
+      ],
+      "webhookId": "e6b81ebd-12b7-4089-86e7-ea1917491585"
+    },
+    {
+      "parameters": {},
+      "id": "dd6119ea-f652-43a2-bbb0-e1a646bf60a9",
+      "name": "No Operation, do nothing",
+      "type": "n8n-nodes-base.noOp",
+      "typeVersion": 1,
+      "position": [
+        1500,
+        500
+      ]
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "db5cfe0a-7f43-4a61-8b27-bfd3a95deb8d",
+              "name": "messages",
+              "value": "={{ ($json.messages.concat(Array))}}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {
+          "ignoreConversionErrors": true
+        }
+      },
+      "id": "73c65e72-5922-4bc9-a624-81a120a49091",
+      "name": "messages",
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        1700,
+        340
+      ]
+    },
+    {
+      "parameters": {
+        "operation": "delete",
+        "key": "={{ $('Separa vars').item.json.remoteJID }}"
+      },
+      "id": "931c7c4b-4957-460d-b5c4-40eb7959effe",
+      "name": "delete buffer",
+      "type": "n8n-nodes-base.redis",
+      "typeVersion": 1,
+      "position": [
+        1480,
+        340
+      ],
+      "credentials": {
+        "redis": {
+          "id": "MKNLoiwtabZzc4Hr",
+          "name": "Redis account 2"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "loose",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "372959bb-ef98-4d8c-8cd4-abfeb9dec56f",
+              "leftValue": "={{ $json.messages.last() }}",
+              "rightValue": "={{ $('Wait').item.json.body.content }}",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "looseTypeValidation": true,
+        "options": {
+          "ignoreCase": false
+        }
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        1240,
+        360
+      ],
+      "id": "2ce5dc1c-f921-4918-bfe2-9846793ef785",
+      "name": "If"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "9a7b9883-3f92-4cd6-9bc8-7cea0f5582be",
+              "leftValue": "={{ $json.direction }}",
+              "rightValue": "incoming",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1500,
+        340
+      ],
+      "id": "bee2d9f8-6964-4106-8979-7df7aa4a9149",
+      "name": "direction"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "7066c886-a81c-4b6f-9ec9-adb82640d2be",
+              "name": "remoteJID",
+              "value": "={{ $('Separa vars').item.json.remoteJID }}",
+              "type": "string"
+            },
+            {
+              "id": "ef51d1b0-fff4-4341-b5e1-bce6cfc34243",
+              "name": "body.content",
+              "value": "={{ ($json.content || \"\") + ($json.text || \"\") }}\n",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        420,
+        360
+      ],
+      "id": "70534e6d-caae-4cf8-b859-93bfafc8ea54",
+      "name": "serialize"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "{{ $('serialize').item.json.remoteJID }}",
+        "contextWindowLength": 100
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.3,
+      "position": [
+        -460,
+        960
+      ],
+      "id": "ac3b4c0e-e8a1-4356-9e93-3de3d9f5ef2f",
+      "name": "Postgres Chat Memory"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "w8avbrs50lHFROyb",
+          "mode": "id"
+        },
+        "options": {
+          "waitForSubWorkflow": true
+        }
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.1,
+      "position": [
+        180,
+        100
+      ],
+      "id": "5dd31fe3-c3cf-4740-84cc-2aecf71b3863",
+      "name": "Execute Workflow"
+    },
+    {
+      "parameters": {
+        "mode": "delete",
+        "deleteMode": "all"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryManager",
+      "typeVersion": 1.1,
+      "position": [
+        -560,
+        740
+      ],
+      "id": "7f2f657a-565f-4e7b-b42f-678c7dc3ead6",
+      "name": "apagar memoria"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "d8ef0153-0950-466b-b0e2-1658f53433d5",
+              "leftValue": "={{ $json.agentID }}",
+              "rightValue": "",
+              "operator": {
+                "type": "number",
+                "operation": "empty",
+                "singleValue": true
+              }
+            },
+            {
+              "id": "e8afc406-c27b-4d40-b4b4-f8259dcbdb4c",
+              "leftValue": "{{ $json.agentID }}",
+              "rightValue": "1",
+              "operator": {
+                "type": "string",
+                "operation": "equals",
+                "name": "filter.operator.equals"
+              }
+            }
+          ],
+          "combinator": "or"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -820,
+        240
+      ],
+      "id": "ca22f24a-3d48-4328-92ba-c456ec7d3edc",
+      "name": "seletor de agente"
+    },
+    {
+      "parameters": {
+        "conditions": {
+          "options": {
+            "caseSensitive": true,
+            "leftValue": "",
+            "typeValidation": "strict",
+            "version": 2
+          },
+          "conditions": [
+            {
+              "id": "3305967f-3485-4d17-bb35-92bb72974a3d",
+              "leftValue": "={{ $json.content }}",
+              "rightValue": "Reset",
+              "operator": {
+                "type": "string",
+                "operation": "notEquals"
+              }
+            }
+          ],
+          "combinator": "and"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.if",
+      "typeVersion": 2.2,
+      "position": [
+        -1020,
+        260
+      ],
+      "id": "0856b69c-ed62-4a9f-84f2-bcd88fb329a4",
+      "name": "keyword"
+    },
+    {
+      "parameters": {
+        "workflowId": {
+          "__rl": true,
+          "value": "Z4GWTyNG549Bug01",
+          "mode": "list",
+          "cachedResultName": "TRANSFER AGENT"
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.executeWorkflow",
+      "typeVersion": 1.1,
+      "position": [
+        -580,
+        400
+      ],
+      "id": "26589b04-64d4-406e-9346-fbe4e2b6a141",
+      "name": "Execute Workflow1"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "4acaa41e-bb6d-4428-a10c-21e3193d3e5b",
+              "name": "remoteJID",
+              "value": "={{ $json.body.conversation.meta.sender.identifier }}",
+              "type": "string"
+            },
+            {
+              "id": "08e2eacd-7545-4d18-b44c-130e962f2537",
+              "name": "name",
+              "value": "={{ $json.body.conversation.meta.sender.name }}",
+              "type": "string"
+            },
+            {
+              "id": "d5527206-7ac3-4cc3-aff7-e29b87c0674a",
+              "name": "agentID",
+              "value": "={{ $json.body.conversation.meta.assignee.id }}",
+              "type": "number"
+            },
+            {
+              "id": "7d9f9d2b-e10b-4622-a058-8336a43a85aa",
+              "name": "inboxID",
+              "value": "={{ $json.body.inbox.id }}",
+              "type": "number"
+            },
+            {
+              "id": "cd0b6c81-c401-4c51-be45-f10c671da537",
+              "name": "conversationID",
+              "value": "={{ $json.body.conversation.id }}",
+              "type": "number"
+            },
+            {
+              "id": "8ff0dd5c-cd22-4f22-b472-e89793a1281c",
+              "name": "direction",
+              "value": "={{ $json.body.message_type }}",
+              "type": "string"
+            },
+            {
+              "id": "055004bd-df89-4aed-96d8-164db8679ce5",
+              "name": "media",
+              "value": "={{ $json.body.attachments[0].file_type }}",
+              "type": "string"
+            },
+            {
+              "id": "d6fa4fae-fd28-403a-b513-08d4c8bae0f9",
+              "name": "TEXTO",
+              "value": "={{ $json.body.conversation.messages[0].content_type }}",
+              "type": "string"
+            },
+            {
+              "id": "4f428bc3-a3d0-48ec-81d7-abe11f2eb801",
+              "name": "data_url",
+              "value": "={{ $json.body.conversation.messages[0].attachments[0].data_url }}",
+              "type": "string"
+            },
+            {
+              "id": "49c625d0-1550-4a7d-aa3b-f2b2f596236e",
+              "name": "body.conversation.messages[0].attachments[0].file_type",
+              "value": "={{ $json.body.conversation.messages[0].attachments[0].file_type }}",
+              "type": "string"
+            },
+            {
+              "id": "3218d555-5521-41f5-8ba8-a5393f72dd19",
+              "name": "content",
+              "value": "={{ $json.body.content }}",
+              "type": "string"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        -1680,
+        380
+      ],
+      "id": "0682cf62-1edc-4e11-b321-15e8ee1feff4",
+      "name": "Separa vars"
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "=**Atue como o Megabot, recepcionista digital da Megabuy Vistos. Sua missão é recepcionar leads de forma simpática, envolvente, e profissional, utilizando uma abordagem informal e acolhedora. A conversa deve ser fluida e amigável, com perguntas abertas e empáticas para entender as necessidades do cliente e realizar o atendimento apropriado. Siga uma estrutura dividida em etapas e use textos curtos, mantendo a comunicação clara e agradável.**\n\nEXEMPLO DE INTERAÇÃO\n\n**Lead:** Olá, boa tarde! Estou interessado em tirar o visto americano. Pode me explicar melhor como funciona o processo?\n\n**Agente:** Boa tarde! Claro, ficamos felizes em ajudar. Nosso processo é bem simples e eficiente, dividido em 3 etapas. Primeiro, você faz o pagamento do nosso serviço, que pode ser feito de várias formas: dinheiro, débito, crédito, transferência bancária ou Pix. Depois, enviamos um questionário personalizado para coletar seus dados e montar o seu perfil, aumentando as chances de aprovação. Por fim, você nos envia uma foto do seu passaporte válido e do último visto americano (se tiver), e nós cuidamos de todo o restante, incluindo o preenchimento do formulário DS-160 e o encaminhamento do boleto da taxa consular. \n\n**Lead:** E se eu tiver problemas com o preenchimento do formulário DS-160? Vocês ajudam com isso?\n\n**Agente:** Com certeza! O preenchimento do formulário DS-160 é uma das etapas mais importantes do processo, e nós cuidaremos disso para você. Nós revisamos todas as informações para garantir que estejam corretas e de acordo com as exigências do consulado.\nVc apenas preenche o Questionário da Megabuy onde vamos coletar informações pessoais para montar o processo.\n\n\n**Lead:** Vocês ajudam com a documentação também? O que eu preciso levar para a entrevista?\n\n**Agente:** Sim, nós oferecemos orientação completa sobre a documentação necessária. Nós te ajudamos a reunir tudo isso e damos dicas para que você esteja bem preparado.\n\n\n**Lead:** Entendi. E quanto custa o serviço de vocês?\n\n**Agente:** Temos valores bem acessíveis! Para 1 pessoa, o valor é de R$ 320,00. Se forem 2 pessoas, o valor cai para R$ 300,00 por pessoa. E para grupos de 3 ou mais pessoas, o valor é de apenas R$ 280,00 por pessoa. Esses valores são para pagamento à vista, e estão sujeitos a alteração sem aviso prévio.\n\n**Lead:** E a taxa consular, já está incluída nesse valor?\n\n**Agente:** Não, a taxa consular é separada. Ela custa U$ 185,00 por pessoa, e o valor é convertido automaticamente para Reais no momento do pagamento. Nosso serviço inclui a assessoria completa, desde o preenchimento do formulário até a orientação para a entrevista.\n\n**Lead:** Ah, entendi. E se eu já tive um visto americano antes, posso renovar sem precisar fazer a entrevista?\n\n**Agente:** Sim, exatamente! Para renovação sem entrevista, oferecemos o serviço de entrega dos seus documentos no CASV. O valor desse serviço pode variar, então recomendo que você consulte conosco para saber o valor exato.\n\n**Lead:** E se eu não tiver um visto americano anterior? Como fica o processo?\n\n**Agente:** Sem problemas! Se você nunca teve um visto americano antes, o processo é basicamente o mesmomas com a entrevista. A única diferença é que você não precisará enviar uma foto do último visto, já que não tem um. Nós cuidamos de todo o restante, incluindo o preenchimento do formulário DS-160 e a preparação para a entrevista ( que inclui comprotamentla, analise do perfil e documentação recomendada).\n\n**Lead:** E se eu precisar de ajuda na hora da entrevista? Vocês dão alguma orientação específica?\n\n**Agente:** Sim, nós oferecemos dicas valiosas para a entrevista, como o que vestir, como se comportar e como responder às perguntas mais comuns. A entrevista é uma parte crucial do processo, e estamos aqui para te ajudar a se sentir confiante e preparado.\n\n**Lead:** E quanto tempo demora para o visto ser aprovado?\n\n**Agente:** O tempo de aprovação pode variar dependendo da demanda no consulado e da complexidade do seu caso. Normalmente, após a entrevista, o visto fica pronto em 10 dias úteis aproximadamente. No entanto, o agendamento da entrevista pode levar algumas semanas, dependendo da disponibilidade no consulado. Nós ajudamos a agilizar o processo o máximo possível.\n\n**Lead:** E se meu visto for negado? Vocês devolvem o dinheiro?\n\n**Agente:** Infelizmente, não podemos garantir a aprovação do visto, pois a decisão final é do consulado. No entanto, nosso serviço é focado em maximizar as chances de aprovação, preparando todos os documentos e orientando você para a entrevista. Em caso de negação, não há reembolso, mas podemos ajudar a entender os motivos e orientar sobre possíveis próximos passos.\n\n**Lead:** E depois que o visto for aprovado, como faço para retirar o passaporte?\n\n**Agente:** Oferecemos também o serviço de retirada do passaporte com o visto já aprovado, para sua comodidade. O valor desse serviço também pode variar, então é só nos consultar para mais detalhes.\n\n**Lead:** E se eu tiver uma emergência e precisar do visto rápido? Vocês têm algum serviço expresso?\n\n**Agente:** Dependendo da urgência, podemos tentar agilizar o processo, mas isso está sujeito à disponibilidade do consulado. Em alguns casos, é possível solicitar um agendamento de emergência, mas isso geralmente requer uma justificativa válida, como uma emergência médica ou familiar. Podemos te orientar sobre isso caso seja necessário.\n\n**Lead:** Beleza, parece bem completo. E se eu tiver dúvidas durante o processo, posso entrar em contato com vocês?\n\n**Agente:** Com certeza! Estamos à disposição para qualquer dúvida que você tiver. Você pode nos contatar por telefone, WhatsApp ou pelo site. Nossos números são (11) 4191-6458 / (11) 4191-6459 e WhatsApp (11) 98827-2170. Também temos todas as informações no nosso site: www.megabuyvistos.com.br.\n\n**Lead:** Ótimo! Acho que vou fechar o serviço com vocês. Como faço para começar?\n\n**Agente:** Que ótima notícia! Para começar, você pode fazer o pagamento através da nossa conta no Itaú Unibanco. Os dados são: Banco 341, Agência 4807, Conta corrente 00522-0, Favorecido Megabuy D V V Ltda. Ou, se preferir, pode fazer o pagamento via PIX usando o CNPJ 04.987.057/0001-87. Assim que o pagamento for confirmado, já começamos o processo!\n\n**Lead:** Perfeito! Vou fazer o pagamento ainda hoje e já te aviso. Obrigado pela ajuda!\n\n**Agente:** Por nada! Ficamos no aguardo do seu pagamento e já começamos a trabalhar no seu visto. Qualquer dúvida, é só entrar em contato. Tenha um ótimo dia!\n\n**Lead:** Igualmente! Até logo.\n\n\n**Lead:** E se eu tiver mais dúvidas depois de contratar o serviço? Posso entrar em contato a qualquer momento?\n\n**Agente:** Claro! Estamos à disposição para ajudar em qualquer etapa do processo. Você pode nos contatar por telefone, WhatsApp ou e-mail sempre que precisar. Nosso objetivo é garantir que você tenha uma experiência tranquila e bem-sucedida.\n\n\n\n\n\n**Tome fôlego e siga este roteiro passo a passo para criar uma experiência leve, clara e eficiente. IDENTIFICANDO A PROGRESSÃO DO CLIENTE PELO ATENDIMENTO. SEM SER APRESSADO OU REPETITIVO**",
+        "options": {
+          "systemMessage": "=Você é um assistente especializado em qualificação de leads para serviços de assessoria de vistos e passaportes, representando a Megabuy. Seu objetivo é identificar o estágio do cliente no funil de vendas (topo, meio ou fundo), fornecer informações relevantes com base no contexto armazenado e conduzir o lead até o fundo do funil, onde será redirecionado para um atendente humano para finalizar a venda.  \n\nRegras e Diretrizes:  \n**0. SEMPRE UTILIZE AS FERRAMENTAS A SUA DISPOSIÇÃO PARA REALIZAR AS TAREFAS***\n1. Sempre mantenha um tom informal, simpático, mas profissional.  \n2. Seja claro e objetivo nas respostas, sempre priorizando as informações mais relevantes para a necessidade do cliente.  \n3. Se o cliente estiver no topo ou meio do funil, faça perguntas estratégicas para qualificar o lead.  \n4. Use o contexto das últimas mensagens para personalizar suas respostas.  \n5. Para leads não qualificados, colete as informações necessárias para um follow-up futuro e ofereça outros serviços relevantes.  \n6. Nunca prometa aprovação de visto; explique que a decisão final cabe ao consulado.  \n7. Encerre a conversa com gentileza, oferecendo suporte contínuo, e redirecione o lead, se necessário.\n\nDE ACORDO COM AS INFORMAÇÕES RECEBIDAS A SUA SAIDA DEVE SER APENAS A RESPOSTA PARA O CLIENTE SEGUINDO TODAS AS SUAS DIRETRIZES, EDUCADO , SIMPATICO E PERSUASIVO. MANTENDO O PITCH DE VENDAS;\nSEM MENCIONAR ESTAGIOS DO FUNIL OU SUAS ESTRATÉGIAS.\nHUMANIZE SUA CONVERSA O MÁXIMO\n\nROTEIRO DE IDENTIFICAÇÃO DO LEAD\n---\n\n#### **Etapa 1: Saudação e Contextualização**\n- \"Oi! Bem-vindo(a) à *Megabuy Vistos*! 😊 Eu sou o Megabot, seu ajudante por aqui. Como posso te ajudar hoje?  🛫🌍\"\n\n---\n\n#### **Etapa 2: Identificação da Demanda**\n1. Caso o cliente esteja incerto:\n   - \"Sem problemas, me conta um pouquinho do que você precisa. É algo relacionado a vistos ou passaporte? Quero entender melhor pra te ajudar direitinho. 😉\"\n2. Caso o cliente tenha um objetivo claro:\n   - \"Legal! Me dá só mais alguns detalhes. Tem alguma dúvida? para quantas pessoas seria? Quanto mais eu souber, melhor vou poder te direcionar. 🗺️\"\n\n---\n\n#### **Etapa 3: Empatia e Validação**\n- \"Ah, entendi! Planejar essas coisas pode ser uma loucura, né? Mas fica tranquilo(a), a gente tá aqui pra deixar tudo bem mais fácil pra você. 🎯 Só mais uma perguntinha…\"\n  - \"Já contratou nossos serviços?\"\n  - \"Precisa de ajuda com documentos ou tá mais na parte de decidir as opções?\"\n\n---\n\n#### **Etapa 4: Redirecionamento Personalizado**\n1. Para contratar:\n   - \"Show! Vou te encaminhar pra nossa equipe de vendas, que vai cuidar de tudo pra você viajar sem dor de cabeça. 😉\"\n2. Para informações:\n   - \" Deixa eu te direcionar pra quem é especialista nisso aqui na Megabuy. Eles vão te dar todo o suporte. 🎓✈️\"\n3. Para outras demandas:\n   - \"Entendido! Vou conectar você com o time mais preparado pra resolver isso. Rapidinho, tá? 🚀\"\n\n---\n\n#### **Etapa 5: Encerramento**\n- \"Foi um prazer falar com você! Qualquer coisa, é só chamar. 💬 Enquanto isso, já vou te conectar com a pessoa certa pra te ajudar. Boa sorte com seus planos, e que dê tudo certo na sua jornada! 🌟\"\n\n---"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 1.7,
+      "position": [
+        2020,
+        180
+      ],
+      "id": "8e9bd674-f592-4bc5-859c-85cc452b1f09",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {},
+      "type": "@n8n/n8n-nodes-langchain.toolCalculator",
+      "typeVersion": 1,
+      "position": [
+        2180,
+        420
+      ],
+      "id": "771621ff-7f66-46b0-bac0-9482864dba16",
+      "name": "Calculator"
+    },
+    {
+      "parameters": {
+        "sessionIdType": "customKey",
+        "sessionKey": "={{ $('Separa vars').item.json.remoteJID }}"
+      },
+      "type": "@n8n/n8n-nodes-langchain.memoryPostgresChat",
+      "typeVersion": 1.3,
+      "position": [
+        2020,
+        440
+      ],
+      "id": "f17b882d-47fd-417e-b8c3-2bc65f678907",
+      "name": "Postgres Chat Memory1"
+    },
+    {
+      "parameters": {
+        "descriptionType": "manual",
+        "tableId": "Leads",
+        "dataToSend": "autoMapInputData"
+      },
+      "type": "n8n-nodes-base.supabaseTool",
+      "typeVersion": 1,
+      "position": [
+        2300,
+        400
+      ],
+      "id": "e6142257-162e-4b19-8ce8-17515191e13f",
+      "name": "Supabase"
+    },
+    {
+      "parameters": {
+        "name": "DB",
+        "description": "Use esta ferramenta para encontrar respostas para os serviços da Megabuy",
+        "topK": 1
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1,
+      "position": [
+        2400,
+        740
+      ],
+      "id": "b81afaca-8bae-4375-a959-daa2acba6560",
+      "name": "DB",
+      "notesInFlow": true,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "megabuy",
+          "mode": "list",
+          "cachedResultName": "megabuy"
+        },
+        "options": {
+          "pineconeNamespace": "=UK"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        2280,
+        900
+      ],
+      "id": "a76d57d7-2cd8-41c7-af5b-245d104b7260",
+      "name": "Pinecone Vector Store",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash-thinking-exp-1219",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        2560,
+        900
+      ],
+      "id": "1ddf72d3-2429-4251-a143-b728ac731294",
+      "name": "Google Gemini Chat Model3"
+    },
+    {
+      "parameters": {
+        "modelName": "embed-multilingual-v2.0"
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsCohere",
+      "typeVersion": 1,
+      "position": [
+        2340,
+        1040
+      ],
+      "id": "b653287c-8831-4442-afdc-e2be47a2b15e",
+      "name": "Embeddings Cohere",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "megabuy",
+          "mode": "list",
+          "cachedResultName": "megabuy"
+        },
+        "options": {
+          "pineconeNamespace": "=CAN"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        1760,
+        880
+      ],
+      "id": "a60ee7bd-607f-4b3c-ad33-8b501b0fe595",
+      "name": "Pinecone Vector Store1"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash-thinking-exp-1219",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        2040,
+        880
+      ],
+      "id": "9550e5a8-5edb-4b90-8c98-a821f98bf0af",
+      "name": "Google Gemini Chat Model4"
+    },
+    {
+      "parameters": {
+        "modelName": "embed-multilingual-v2.0"
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsCohere",
+      "typeVersion": 1,
+      "position": [
+        1820,
+        1020
+      ],
+      "id": "473dcbf5-4f2d-4b9b-a536-7ad7531037c0",
+      "name": "Embeddings Cohere1"
+    },
+    {
+      "parameters": {
+        "name": "DB",
+        "description": "Use esta ferramenta para encontrar respostas para os serviços da Megabuy",
+        "topK": 1
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1,
+      "position": [
+        2300,
+        1340
+      ],
+      "id": "e623d65c-3ef7-421c-8239-419247a47d37",
+      "name": "DB2",
+      "notesInFlow": true,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "megabuy",
+          "mode": "list",
+          "cachedResultName": "megabuy"
+        },
+        "options": {
+          "pineconeNamespace": "=AUS"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        2320,
+        1560
+      ],
+      "id": "5d57ef12-abb3-4049-9f0c-9301cd7577ed",
+      "name": "Pinecone Vector Store2",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash-thinking-exp-1219",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        2600,
+        1560
+      ],
+      "id": "da22195f-fa91-4e67-b16e-16084fcdf149",
+      "name": "Google Gemini Chat Model5"
+    },
+    {
+      "parameters": {
+        "modelName": "embed-multilingual-v2.0"
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsCohere",
+      "typeVersion": 1,
+      "position": [
+        2380,
+        1700
+      ],
+      "id": "c992aa93-c281-4ecc-8b98-f8a87b4de10c",
+      "name": "Embeddings Cohere2",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "name": "DB",
+        "description": "Use esta ferramenta para encontrar respostas para os serviços da Megabuy",
+        "topK": 1
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1,
+      "position": [
+        1860,
+        1360
+      ],
+      "id": "1de44013-5bbd-46c0-9a2b-11b14b6bb7c1",
+      "name": "DB3",
+      "notesInFlow": true,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "megabuy",
+          "mode": "list",
+          "cachedResultName": "megabuy"
+        },
+        "options": {
+          "pineconeNamespace": "={{ $('Join').item.json.namespace }}"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        1740,
+        1520
+      ],
+      "id": "022e9ae6-9db9-4366-87a9-8b5bac7cf94f",
+      "name": "Pinecone Vector Store3",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash-thinking-exp-1219",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        2020,
+        1520
+      ],
+      "id": "94908b63-be6d-499a-aa69-2a9c30405f25",
+      "name": "Google Gemini Chat Model6"
+    },
+    {
+      "parameters": {
+        "modelName": "embed-multilingual-v2.0"
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsCohere",
+      "typeVersion": 1,
+      "position": [
+        1800,
+        1660
+      ],
+      "id": "ef292856-d6ed-4b4d-bccf-86360ca1694d",
+      "name": "Embeddings Cohere3",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "name": "DB",
+        "description": "Use esta ferramenta para encontrar respostas para os serviços da Megabuy",
+        "topK": 1
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        1420
+      ],
+      "id": "a516a232-876c-4c63-a304-0c0d4cb17372",
+      "name": "DB4",
+      "notesInFlow": true,
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "megabuy",
+          "mode": "list",
+          "cachedResultName": "megabuy"
+        },
+        "options": {
+          "pineconeNamespace": "=CHN"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        1200,
+        1560
+      ],
+      "id": "78b42034-cd0a-45d6-9cc7-15416e66fe3c",
+      "name": "Pinecone Vector Store4",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash-thinking-exp-1219",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1460,
+        1580
+      ],
+      "id": "616ea5b7-9f0d-4b5b-b703-a989cfb46e3c",
+      "name": "Google Gemini Chat Model7"
+    },
+    {
+      "parameters": {
+        "modelName": "embed-multilingual-v2.0"
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsCohere",
+      "typeVersion": 1,
+      "position": [
+        1240,
+        1720
+      ],
+      "id": "b7ac0a9f-ca2b-42a3-aa43-5b130ed3cf16",
+      "name": "Embeddings Cohere4",
+      "disabled": true
+    },
+    {
+      "parameters": {
+        "pineconeIndex": {
+          "__rl": true,
+          "value": "megabuy",
+          "mode": "list",
+          "cachedResultName": "megabuy"
+        },
+        "options": {
+          "pineconeNamespace": "=USA"
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.vectorStorePinecone",
+      "typeVersion": 1,
+      "position": [
+        1300,
+        920
+      ],
+      "id": "cf391d5e-23da-4c6a-98c4-fac24ada124a",
+      "name": "Pinecone Vector Store5"
+    },
+    {
+      "parameters": {
+        "modelName": "models/gemini-2.0-flash-thinking-exp-1219",
+        "options": {
+          "temperature": 0
+        }
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatGoogleGemini",
+      "typeVersion": 1,
+      "position": [
+        1580,
+        920
+      ],
+      "id": "90f408e5-d38e-47cb-bb07-331f8ef3289c",
+      "name": "Google Gemini Chat Model8"
+    },
+    {
+      "parameters": {
+        "modelName": "embed-multilingual-v2.0"
+      },
+      "type": "@n8n/n8n-nodes-langchain.embeddingsCohere",
+      "typeVersion": 1,
+      "position": [
+        1360,
+        1060
+      ],
+      "id": "055b4d72-4551-4585-9361-085169c66ad5",
+      "name": "Embeddings Cohere5"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "=https://chat.megabuy.com.br/api/v1/accounts/1/conversations/{{ $('Separa vars').item.json.conversationID }}/messages ",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "api_access_token",
+              "value": "AnrG4ZyUYhzeiewyWyuAVBwv"
+            }
+          ]
+        },
+        "sendBody": true,
+        "bodyParameters": {
+          "parameters": [
+            {
+              "name": "application/json",
+              "value": "charset=utf-8"
+            },
+            {
+              "name": "content",
+              "value": "={{ $json.output }}"
+            },
+            {
+              "name": "private",
+              "value": "false"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        2480,
+        180
+      ],
+      "id": "de7b84f1-b24b-4b43-9d1c-d3670b56cd61",
+      "name": "Mensagem"
+    },
+    {
+      "parameters": {
+        "name": "USA",
+        "description": "UTILIZE ESSA FERRAMENTA SEMPRE QUE PRECISAR DE INFORMAÇÕES SOBRE ASSESSORIA PARA O VISTO AMERICANO.\nPREÇOS E PROCEDIMENTOS.",
+        "topK": 1
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1,
+      "position": [
+        1420,
+        760
+      ],
+      "id": "d2feee22-03de-402c-89a4-eeb57b5203a8",
+      "name": "USA",
+      "notesInFlow": true
+    },
+    {
+      "parameters": {
+        "name": "CAN",
+        "description": "UTILIZE ESSA FERRAMENTA SEMPRE QUE PRECISAR DE INFORMAÇÕES SOBRE ASSESSORIA PARA O VISTO CANADENSE.\nPREÇOS E PROCEDIMENTOS.",
+        "topK": 1
+      },
+      "type": "@n8n/n8n-nodes-langchain.toolVectorStore",
+      "typeVersion": 1,
+      "position": [
+        1880,
+        720
+      ],
+      "id": "9c97333f-225a-4570-9ab9-2738887366f9",
+      "name": "CAN",
+      "notesInFlow": true
+    }
+  ],
+  "pinData": {
+    "Webhook": [
+      {
+        "json": {
+          "headers": {
+            "host": "hook.megabuy.com.br",
+            "user-agent": "rest-client/2.1.0 (linux-musl x86_64) ruby/3.3.3p89",
+            "content-length": "4426",
+            "accept": "application/json",
+            "accept-encoding": "gzip;q=1.0,deflate;q=0.6,identity;q=0.3",
+            "content-type": "application/json",
+            "x-forwarded-for": "172.18.0.1",
+            "x-forwarded-host": "hook.megabuy.com.br",
+            "x-forwarded-port": "443",
+            "x-forwarded-proto": "https",
+            "x-forwarded-server": "cfe8b78f1d6a",
+            "x-real-ip": "172.18.0.1"
+          },
+          "params": {},
+          "query": {},
+          "body": {
+            "account": {
+              "id": 1,
+              "name": "Megabuy Vistos"
+            },
+            "additional_attributes": {},
+            "content_attributes": {
+              "external_created_at": 1736889619,
+              "items": {
+                "quepasa": {
+                  "msgid": "010E63FBE9FA1FB340F8680921744BDB"
+                }
+              }
+            },
+            "content_type": "text",
+            "content": "Boa  tarde",
+            "conversation": {
+              "additional_attributes": {
+                "mail_subject": ""
+              },
+              "can_reply": true,
+              "channel": "Channel::Api",
+              "contact_inbox": {
+                "id": 50,
+                "contact_id": 3,
+                "inbox_id": 3,
+                "source_id": "2e9dfd5d-2733-4efd-b491-30d81c09c475",
+                "created_at": "2024-12-12T22:50:55.928Z",
+                "updated_at": "2024-12-12T22:50:55.928Z",
+                "hmac_verified": false,
+                "pubsub_token": "tHSsaviwuDR53PcEBKDZyvKj"
+              },
+              "id": 60,
+              "inbox_id": 3,
+              "messages": [
+                {
+                  "id": 13207,
+                  "content": "Boa  tarde",
+                  "account_id": 1,
+                  "inbox_id": 3,
+                  "conversation_id": 60,
+                  "message_type": 0,
+                  "created_at": 1736889621,
+                  "updated_at": "2025-01-14T21:20:21.680Z",
+                  "private": false,
+                  "status": "sent",
+                  "source_id": "010E63FBE9FA1FB340F8680921744BDB",
+                  "content_type": "text",
+                  "content_attributes": {
+                    "external_created_at": 1736889619,
+                    "items": {
+                      "quepasa": {
+                        "msgid": "010E63FBE9FA1FB340F8680921744BDB"
+                      }
+                    }
+                  },
+                  "sender_type": "Contact",
+                  "sender_id": 3,
+                  "external_source_ids": {},
+                  "additional_attributes": {},
+                  "processed_message_content": "Boa  tarde",
+                  "sentiment": {},
+                  "conversation": {
+                    "assignee_id": null,
+                    "unread_count": 5,
+                    "last_activity_at": 1736889621,
+                    "contact_inbox": {
+                      "source_id": "2e9dfd5d-2733-4efd-b491-30d81c09c475"
+                    }
+                  },
+                  "sender": {
+                    "additional_attributes": {},
+                    "custom_attributes": {
+                      "skipagenttitle": false
+                    },
+                    "email": null,
+                    "id": 3,
+                    "identifier": "5511994568896@s.whatsapp.net",
+                    "name": "William Scarpelli",
+                    "phone_number": "+5511994568896",
+                    "thumbnail": "https://chat.megabuy.com.br/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff44425be8a5e5c20067d644be3376dd936779f7/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWZvdyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--297f76505667dc46aed5b2693e6100ff8d170b50/345671252_243790198306682_6615187217476341009_n.jpg",
+                    "type": "contact"
+                  }
+                }
+              ],
+              "labels": [],
+              "meta": {
+                "sender": {
+                  "additional_attributes": {},
+                  "custom_attributes": {
+                    "skipagenttitle": false
+                  },
+                  "email": null,
+                  "id": 3,
+                  "identifier": "5511994568896@s.whatsapp.net",
+                  "name": "William Scarpelli",
+                  "phone_number": "+5511994568896",
+                  "thumbnail": "https://chat.megabuy.com.br/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff44425be8a5e5c20067d644be3376dd936779f7/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWZvdyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--297f76505667dc46aed5b2693e6100ff8d170b50/345671252_243790198306682_6615187217476341009_n.jpg",
+                  "type": "contact"
+                },
+                "assignee": null,
+                "team": null,
+                "hmac_verified": false
+              },
+              "status": "open",
+              "custom_attributes": {},
+              "snoozed_until": null,
+              "unread_count": 5,
+              "first_reply_created_at": "2024-12-12T22:50:56.518Z",
+              "priority": null,
+              "waiting_since": 1736889470,
+              "agent_last_seen_at": 1736887974,
+              "contact_last_seen_at": 0,
+              "last_activity_at": 1736889621,
+              "timestamp": 1736889621,
+              "created_at": 1734043856
+            },
+            "created_at": "2025-01-14T21:20:21.680Z",
+            "id": 13207,
+            "inbox": {
+              "id": 3,
+              "name": "Megabuy"
+            },
+            "message_type": "incoming",
+            "status": "sent",
+            "private": false,
+            "sender": {
+              "account": {
+                "id": 1,
+                "name": "Megabuy Vistos"
+              },
+              "additional_attributes": {},
+              "avatar": "https://chat.megabuy.com.br/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff44425be8a5e5c20067d644be3376dd936779f7/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWZvdyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--297f76505667dc46aed5b2693e6100ff8d170b50/345671252_243790198306682_6615187217476341009_n.jpg",
+              "custom_attributes": {
+                "skipagenttitle": false
+              },
+              "email": null,
+              "id": 3,
+              "identifier": "5511994568896@s.whatsapp.net",
+              "name": "William Scarpelli",
+              "phone_number": "+5511994568896",
+              "thumbnail": "https://chat.megabuy.com.br/rails/active_storage/representations/redirect/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaHBkZz09IiwiZXhwIjpudWxsLCJwdXIiOiJibG9iX2lkIn19--ff44425be8a5e5c20067d644be3376dd936779f7/eyJfcmFpbHMiOnsibWVzc2FnZSI6IkJBaDdCem9MWm05eWJXRjBTU0lJYW5CbkJqb0dSVlE2RTNKbGMybDZaVjkwYjE5bWFXeHNXd2RwQWZvdyIsImV4cCI6bnVsbCwicHVyIjoidmFyaWF0aW9uIn19--297f76505667dc46aed5b2693e6100ff8d170b50/345671252_243790198306682_6615187217476341009_n.jpg"
+            },
+            "source_id": "010E63FBE9FA1FB340F8680921744BDB",
+            "event": "message_created"
+          },
+          "webhookUrl": "https://hook.megabuy.com.br/webhook/chatwoot",
+          "executionMode": "production"
+        }
+      }
+    ]
+  },
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "staticData": null,
+  "tags": [
+    {
+      "createdAt": "2025-01-24T15:42:43.271Z",
+      "updatedAt": "2025-01-24T15:42:43.271Z",
+      "id": "SCD8dv2ksVWqKJs6",
+      "name": "DEVELOPMENT"
+    }
+  ],
+  "triggerCount": 0,
+  "updatedAt": "2025-01-24T16:17:17.551Z",
+  "versionId": "19d5860e-ab13-4b7f-8cc6-15a3936550cb"
+}
